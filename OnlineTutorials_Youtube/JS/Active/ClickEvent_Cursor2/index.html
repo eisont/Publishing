@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click And Hold</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h2>Click And Hold Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae id laudantium earum alias, praesentium quod sequi ad, delectus veniam optio sed eius pariatur itaque qui ipsam. Pariatur ratione ullam expedita dolorem hic, molestias amet laboriosam aut consequuntur alias necessitatibus odit magnam non facere accusamus labore recusandae voluptates consectetur corrupti nam sunt. Accusantium quasi corporis unde quaerat, odit necessitatibus consectetur quis omnis consequatur nemo. <br><br>
+        Expedita enim dolores, eligendi asperiores eveniet impedit minus porro. Repellat officiis, ullam labore suscipit provident expedita accusamus, esse quisquam sapiente error recusandae perspiciatis quasi aperiam cum corrupti omnis ipsam est corporis eligendi culpa! Laudantium, cumque est consectetur maiores amet alias! Similique quam animi autem non perspiciatis et consequuntur eveniet laboriosam id nemo. Vero libero sunt ducimus sit ab iure corrupti explicabo, quia minima enim nemo assumenda odio ut delectus iste perspiciatis voluptas magnam voluptate saepe. Totam fuga soluta, doloremque, ducimus perspiciatis quas veniam placeat saepe quod in tenetur aut alias dolore commodi omnis illum libero. Natus quo ipsam officiis nobis repudiandae totam porro, atque, labore sapiente mollitia laudantium. Sint aspernatur amet nihil reprehenderit veritatis ad! Quod cum iste repellat!<br><br> Repudiandae nesciunt deleniti ipsum doloremque accusantium amet nihil consequuntur quia, necessitatibus labore iste? Quos ipsam odio pariatur a, delectus incidunt quisquam? Optio, culpa animi quis similique distinctio, ullam aliquam laborum assumenda necessitatibus enim eum aut atque a quam ratione aliquid eos minima. Atque aperiam numquam ut mollitia praesentium. Ipsam laudantium nisi veritatis, blanditiis sit debitis error sequi nihil assumenda officia tempore esse mollitia accusamus dolorum veniam eligendi, nam ipsum harum! Laborum alias facilis hic sunt voluptatibus delectus rerum fugit modi quae dolorem commodi, quas ab necessitatibus perspiciatis sapiente! Nihil maxime placeat, ratione mollitia commodi quisquam quos facilis dolorem, nostrum aliquam deserunt debitis sed eum natus atque a vel illo, error sapiente rerum. Voluptates ducimus eum blanditiis quaerat.</p>
+    </section>
+    <div id="cursor"></div>
+
+    <script type="text/javascript">
+        var cursor = document.getElementById('cursor');
+        window.onmousemove = function(e){
+            var x = e.clientX,
+                y = e.clientY;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        }
+
+    </script>
+</body>
+</html>

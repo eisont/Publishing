@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qucik Image Comparison Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+        <section>
+            <div id="layer"></div>
+        </section>
+    </body>
+
+    <script type="text/javascript">
+        var slide = document.getElementById('layer');
+        window.onmousemove = function (e) {
+            var x = e.clientX;
+            slide.style.left = x + 'px';
+        }
+    </script>
+</body>
+
+</html>

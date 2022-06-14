@@ -1,0 +1,83 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+.mypic {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://swchurch.org/data/file/column/3543613611_JHnz9mTD_e0075435.jpg');
+    background-position: center;
+    background-size: contain;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.mypic h1 {
+    font-size: 3em;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+.mypic h5 span {
+    color: cornflowerblue;
+}
+.mypic h5 span:nth-child(2) {
+    color: lightblue;
+}
+.mypic .btn{
+    transition: 0.2s;
+}
+
+.mypost {
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+    display: none
+}
+.mypost > div {
+    margin-top: 10px;
+}
+.button_array {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.button_array button {
+    margin: 0 5px;
+}
+
+#comment-list {
+    position: relative;
+    width: 70%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: lightblue;
+}
+#comment_bx {
+    position: relative;
+    width: 45%;
+    height: 200px;
+    margin: 1%;
+    overflow: hidden;
+}
+#comment_bx .left_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#comment_bx .left_bx .card-body p{
+    height: 45px;
+    overflow-y: scroll;
+}

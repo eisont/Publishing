@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    
+    background-image: url(img/logo/oc-background-branded.jpg);
+    background-repeat: repeat-x;;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_total {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    overflow-x:scroll;
+}
+.img_total img {
+    width: 40vh;
+    margin: 0 2vh;
+}
+
+
+.img_total::-webkit-scrollbar {
+    height: 5px;
+    background-color: black;
+}
+
+.img_total::-webkit-scrollbar-thumb {
+    background-color: white;
+}

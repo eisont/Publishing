@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>1주차 | 김치훈 |  부트스트랩 연습하기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+        .mytitle {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img-cdn.chanelwebservices.com/1562146927152-1932-plume-signature-collection-2x.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 300px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mytitle h1 {
+            font-size: 5em;
+            font-family: sans-serif;
+            font-weight: 900;
+        }
+
+        .mypost {
+            max-width: 500px;
+            width: 95%;
+            margin: 20px auto 0px auto;
+            box-shadow: 0px 0px 3px 0px gray;
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 95%;
+            margin: 10px auto 0px auto;
+            box-shadow: 0px 0px 1px 0px gray;
+            padding: 10px;
+        }
+
+        .button_bx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .btn-dark {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        <!--로딩 후 호출하기 코드-->
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+                data: {},
+                success: function (response) {
+                    // console.log(response['temp'])
+                    let temp = response['temp']
+
+                    $('#temp').text(temp)
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>CHANEL</h1>
+        <p>현재 기온 : <span id = 'temp'>00.0</span>도</p>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">최애 브랜드 URL</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>==만족도 별점==</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+        <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                              style="height: 100px"></textarea>
+            <label for="floatingTextarea2">이유</label>
+        </div>
+        <div class="button_bx">
+            <button type="button" class="btn btn-dark">등록하기</button>
+            <button type="button" class="btn btn-light">닫기</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>너무 맘에 들어요!!!</p>
+                <footer class="blockquote-footer">K_Dragon
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>너무 맘에 들어요!!!</p>
+                <footer class="blockquote-footer">K_Dragon
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>너무 맘에 들어요!!!</p>
+                <footer class="blockquote-footer">K_Dragon
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</body>
+
+</html>

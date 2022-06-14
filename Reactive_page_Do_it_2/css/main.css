@@ -1,0 +1,1248 @@
+/*모바일용 CSS*/
+
+/*
+왜 속성값을 px단위와 rem 단위 두개로 나눠서 사용하나요? === 폴백기법
+em을 쓰는 경우 상속 문제에 걸립니다. rem단위를 쓰자니 하위 브라우저에서는 작동하지 않는 문제가 있다.
+이런 문제를 해결하기 위해 먼저 px 단위를 사용해 값을 입력하고, 바로 이어서 rem 단위를 사용해 값을 입력합니다.
+그래서 rem을 지원하지 않는 브라우저에서는 px단위를 인식합니다.
+최신 브라우저에서는 px단위를 적용하고 이어서 rem 단위가 나오므로 최종적으로 rem단위를 적용합니다. 
+결국 최신 브라우저에서는 최신 기술을 사용하고 하위 브라우저에서는 최신 기술은 사용할 수 없지만 정상적으로 작동은 합니다.
+이런 기법을 대비책이라는 의미의 폴백(fallback)기법이라고 합니다.
+*/
+
+/*
+css값을 덮어 사용합니다.
+더 그 위에 덮기         pc css
+그 위에 덮기          tablet css
+제일 밑바탕            모바일 css
+모바일 css를 기본으로 하고 tablet css를 덮어서 사용하고 그 위에 pc css를 덮어서 사용합니다.
+*/
+
+
+/*인포메이션 CSS*/
+.info_section {
+    order: 1;
+    /*    
+    인포메이션 영역이 가장 위에 배치되므로 박스의 배치 순서를 변경하는 order 속성의 값을 1로 설정합니다.
+    */
+    width: 100%;
+    background: #2ecc71;
+    border-bottom: 1px solid #39d67c;
+    /*아래쪽 직선을 1px만큼 만듭니다.*/
+}
+
+.info_list {
+    display: flex;
+    /*
+    플렉서블 박스로 작동하게끔 설정합니다.
+    */
+}
+
+.info_list li {
+    width: 25%;
+    text-align: center;
+}
+
+.info_list li a {
+    display: block;
+    /*
+    a태그에 높이값을 부여하기 위해 display 값을 block으로 수정합니다.
+    a태그는 원래 inline 요소입니다.
+    */
+    padding: 15px 0;
+    padding: 0.928rem 0;
+    /*    
+    위아래 패딩값을 15px/0.928rem으로 설정합니다.
+    */
+}
+
+
+/*헤더 영역 CSS*/
+
+.header {
+    order: 2;
+    /*    
+    헤더 영역의 배치 순서를 2번째로 설정합니다.
+    */
+    display: flex;
+    /*    
+    헤더 영역을 플렉서블 박스로 설정하기 위한 설정입니다.
+    */
+    flex-direction: column;
+    /*    
+    세로로 배치(column)하기 위한 속성입니다.
+    */
+    position: relative;
+    /*    
+    오른쪽 상단에 배치하기 위한 상대적인 위치 설정 relative 속성을 설정합니다.
+    */
+    width: 100%;
+    /*
+    너빗값을 100%로 설정합니다.
+    */
+}
+
+.logo {
+    order: 1;
+    /*    
+    배치순서를 첫번째로 하기 위한 설정입니다.
+    */
+    width: 100%;
+    /*    
+    너빗값을 100%로 설정합니다.
+    */
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    /*    
+    위아래 padding을 30px으로 설정합니다.
+    */
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    line-height: 21px;
+    line-height: 1.313rem;
+    text-align: center;
+    text-transform: uppercase;
+    /*    
+    .logo에 있는 모든 text를 대문자로 바꿔줍니다.
+    */
+    background: #2ecc71;
+    text-shadow: 0px 1px 1px #25ab5e;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 거리
+    2. 세로 거리
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.nav {
+    order: 2;
+    /*    
+    배치 순서를 2번째로 하기 위한 설정입니다.
+    */
+    width: 100%;
+}
+
+.gnb {
+    display: none;
+}
+
+.gnb li {
+    display: flex;
+    /*    
+    플렉서블 박스로 설정하기 위한 속성입니다.
+    */
+    background: #2c3e50;
+}
+
+.gnb li a {
+    width: 80%;
+    /*    
+    너빗값을 80%으로 설정합니다.
+    */
+    padding: 20px 0;
+    padding: 1.250rem 0;
+    /*    
+    위아래 padding을 20px/1.250rem으로 설정합니다.
+    */
+    font-size: 0.938em;
+    font-size: 0.938rem;
+    text-indent: 20px;
+    text-indent: 1.250rem;
+    /*    
+    글자를 들여쓰기 위한 text-indent를 20px으로 설정합니다.
+    */
+    font-weight: bold;
+    text-transform: uppercase;
+    /*    
+    글자를 대문자로 변경해줍니다.
+    */
+}
+
+.gnb li span {
+    width: 20%;
+    text-indent: -9999px;
+    /*    
+    글자 들여쓰기를 -9999px으로 설정함으로써 숨기는 기능을 합니다.
+    display: none;을 쓰면 안될까?
+    display:none을 쓰면 이미지, 공간 모두 사라집니다.
+    하지만 text-indent를 쓰면 이미지, 공간들은 살아있고 글자만 사라지기 때문에 토글 버튼을 적용하기에 좋습니다.
+    */
+    background: url(../images/s_images/sub_menu_toggle_btn.png) center center no-repeat;
+    cursor: pointer;
+    /*    
+    마우스 커서의 상태를 설정하기 위한 cursor 속성입니다.
+    */
+}
+
+.menu_toggle_btn {
+    display: block;
+    /*    
+    display: block으로 설정함으로써 높이와 너비를 지정할수 있게 해줍니다.
+    */
+    width: 30px;
+    width: 1.875rem;
+    height: 30px;
+    height: 1.875rem;
+    position: absolute;
+    /*    
+    요소의 위치를 설정하기 위해서 절대적인 위치를 설정하는 absolute를 설정합니다.
+    */
+    top: 10px;
+    top: 0.625rem;
+    right: 10px;
+    right: 0.625rem;
+    text-indent: -9999px;
+    /*    
+    글자만을 들여쓰기합니다. 글자만 숨깁니다.
+    */
+    background: url(../images/s_images/menu_toggle_btn.png) no-repeat;
+    /*    
+    글자를 숨긴 위치에 배경 이미지를 설정합니다.
+    */
+    cursor: pointer;
+}
+
+
+/*슬라이더 영역 CSS*/
+.slider_section {
+    /*
+    이전 버튼, 다음 버튼을 나타내는 class
+    */
+    display: flex;
+    justify-content: space-between;
+    /*    
+    붙어있는 이미지가 띄어지는 현상이 벌어지네?
+    justify-content: space-between의 기능인가?
+    */
+    align-items: center;
+    order: 3;
+    /*    
+    세번째로 배치하기 위한 설정
+    */
+    width: 100%;
+    height: 300px;
+    height: 18.750rem;
+    background: url(../images/p_images/slider_01.jpg) center center no-repeat;
+}
+
+.slider_section span {
+    width: 34px;
+    width: 2.125rem;
+    height: 39px;
+    height: 2.438rem;
+    text-indent: -9999px;
+    /*    
+    글자를 숨기고 이미지들만 보이게 하기 위해서 text-indent에 음숫값을 넣어 지정합니다.
+    */
+    background: url(../images/s_images/slider_arrow.png) no-repeat;
+    cursor: pointer;
+}
+
+span.prev_btn {
+    margin-left: -10px;
+    margin-left: -0.625rem;
+    /*    
+    약간 바깥쪽으로 옮기기 위해 margin-left에 음숫값을 넣어 옮겼습니다.
+    */
+    background-position: 0 0;
+}
+
+span.next_btn {
+    margin-right: -10px;
+    margin-right: -0.625rem;
+    /*    
+    바깥쪽으로 옮기기 위해 margin-right에 음숫값을 넣어 옮겼습니다.
+    바깥쪽이기 때문에 margin을 사용합니다.
+    */
+    /*    
+    padding을 넣어도 되지 않을까?
+    padding은 안쪽 너비를 지정하는 것이기 때문에 바깥쪽으로 옮기지를 못합니다.
+    */
+    background-position: -34px 0;
+    /*
+    전체 이미지의 어느 영역을 보여줄지 설정합니다.
+    이미지의 크기는 68px입니다. 
+    왼쪽 버튼, 오른쪽 버튼 하나씩의 크기는 34px입니다.
+    그 크기 안에 왼쪽버튼, 오른쪽버튼 두개가 모두 들어있습니다.
+    그 중에서 오른쪽 버튼을 쓰기 위해서는 background-positon을 사용해서 쓰려는 위치를 선정해서 사용해야 합니다.
+    background-position: 1 2;
+    1. 좌 우를 지정하는 영역입니다.
+    양수 = 왼쪽 영역을 보여줍니다.
+    음수 = 오른쪽 영역을 보여줍니다.
+    2. 위 아래를 지정하는 영역입니다.
+    양수 = 위쪽 영역을 보여줍니다.
+    음수 = 아래쪽 영역을 보여줍니다.
+    위 코드 해석 === 오른쪽 영역 34px 정도를 보여줍니다. 
+    */
+}
+
+
+/*최신 글 영역, 인기 글 영역 CSS*/
+.latest_post_section {
+    order: 4;
+    /*    
+    모바일 환경의 구조로 보면 네번째와 다섯번째로 나란히 배치되어 있습니다.
+    네번째로 배치하기 위한 설정입니다.
+    */
+    background: #ffc40f;
+    text-shadow: 0px 1px 1px #b98e0b;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.popular_post_section {
+    order: 5;
+    /*    
+    5번째로 배치하기 위한 설정입니다.
+    */
+    background: #a660c2;
+    text-shadow: 0px 1px 1px #714185;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.latest_post_section,
+.popular_post_section {
+    padding: 40px 12.5%;
+    padding: 2.500rem 12.5%;
+    /*
+    40px % 320px
+    위아래 40px/2.500rem을 설정
+    왼쪽 오른쪽 12.5%을 설정
+    */
+}
+
+.title {
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.latest_post_list li,
+.popular_post_list li {
+    margin-top: 15px;
+    margin-top: 0.938rem;
+    padding-left: 14px;
+    padding-left: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url(../images/s_images/post_circle_icon.png) left center no-repeat;
+    /*    
+    background 이미지를 가로 왼쪽 정렬, 세로 가운제 정렬, 배경이미지 반복여부 X
+    */
+}
+
+.latest_post_list li:first-child,
+.popular_post_list li:first-child {
+    margin-top: 0;
+    /*    
+    이미 title 값에 margin-bottom이 부여되어 있어 첫번째 요소 margin-top 값이 필요없어 값을 초기화합니다.
+    */
+}
+
+
+/*갤러리 영역 CSS*/
+.gallery_section {
+    order: 6;
+    padding: 50px 12.5%;
+    padding: 3.125rem 12.5%;
+    /*
+    40px % 320px
+    위아래 50px/3.125rem
+    왼쪽 오른쪽 12.5%
+    */
+    text-align: center;
+    background: #e65d5d;
+    text-shadow: 0px 1px 1px #c43434;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.gallery_section img {
+    width: 100%;
+    /*    
+    위에서 padding 값을 부여했기때문에 width: 100%를 지정해도 꽉찬 화면이 나오지 않는 것입니다.
+    */
+    max-width: 100%;
+    /*    
+    최대 너빗값을 지정합니다.
+    */
+    border-radius: 3px;
+    /*    
+    박스가 약간 둥글게 보이기 위해 border-radius에 조금 값을 부여합니다.
+    */
+    box-shadow: 0px 1px 1px #c43434;
+    /*    
+    box-shadow: 1 2 3 4;
+    1. 오른쪽 위치
+    2. 하단 위치
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.gallery_list li:nth-child(2) {
+    margin-top: 30px;
+    margin-top: 1.875rem;
+    /*    
+    두번째 그림에 margin-top을 부여합니다.
+    */
+}
+
+.gallery_list li figcaption {
+    margin-top: 20px;
+    margin-top: 1.250rem;
+    /*    
+    글자에 margin-top을 부여합니다.
+    */
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*인기 검색어 영역 CSS*/
+.rankup_section {
+    order: 7;
+    padding: 40px 12.5%;
+    padding: 2.500rem 12.5%;
+    /*
+    40px % 320px
+    */
+    background: #219af7;
+    text-shadow: 0px 1px 1px #1974ba;
+}
+
+.rankup_list {
+    display: flex;
+    /*    
+    목록이 가로로 여려줄 배치되어 있습니다.
+    가로로 배치하기 위해 flex로 설정합니다.
+    */
+    flex-wrap: wrap;
+    /*    
+    여러줄로 배치하기 위해 wrap으로 설정합니다.
+    */
+    justify-content: space-between;
+}
+
+.rankup_list li {
+    width: 47.916666666666666666667%;
+    /*
+    115px % 240px
+    값을 부여한 만큼 한 줄의 나타나는 요소의 갯수도 정해집니다.
+    대략 50%로 설정했기 때문에 한줄에 2개만 나타납니다.
+    */
+    margin-top: 15px;
+    margin-top: 0.938rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    /*    
+    박스 안에서 
+    중앙정렬
+    대문자로 변경
+    글씨체 굵게
+    */
+}
+
+.rankup_list li:first-child,
+.rankup_list li:nth-child(2) {
+    margin-top: 0;
+    /*    
+    첫번째 요소와 두번째 요소가 한줄에 같이 있기 때문에 동일하게 margin-top:0 을 부여합니다.
+    */
+}
+
+.rankup_list li a {
+    display: block;
+    /*    
+    a태그는 inline요소이기 때문에 높이나 공간에 사이즈를 부여할 수 없습니다.
+    그래서 display: block으로 변경한 후에
+    공간에 사이즈를 부여하게 만듭니다.
+    */
+    padding: 10px 0;
+    padding: 0.625rem 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+
+/*배너 영역 CSS*/
+.banner_section {
+    order: 8;
+}
+
+.banner_box_01 {
+    background: #e6567a;
+}
+
+.banner_box_01 a {
+    display: block;
+    /*    
+    가로 높이 값을 부여하기 위해 원래 속성 inline을 block으로 재설정합니다.
+    */
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    /*    
+    padding 위 아래 값을 30px/1.875rem으로 설정합니다.
+    */
+    text-align: center;
+}
+
+.banner_box_02 {
+    background: #c44968;
+}
+
+.banner_list {
+    display: flex;
+    /*    
+    플렉서블 박스로 설정함으로써 가로 배열으로 설정합니다.
+    */
+    justify-content: space-between;
+    padding: 30px 12.5%;
+    padding: 1.875rem 12.5%;
+    /*
+    40px % 320px
+    padding 값 위아래 30px/1,875rem으로 설정
+    padding 값 좌우 12.5%으로 설정
+    */
+}
+
+
+/*소셜 네트워크 영역 CSS*/
+.social_section {
+    order: 9;
+    padding: 24px 12.5%;
+    padding: 1.500rem 12.5%;
+    /*
+    40px % 320px
+    padding 위아래 24px/1.500rem 
+    padding 좌우 12.5%
+    */
+    background: #fff;
+}
+
+.social_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*푸터 영역 CSS*/
+.footer {
+    order: 10;
+    width: 100%;
+    background: #474747;
+}
+
+.footer p {
+    padding: 20px;
+    padding: 1.250rem;
+    font-size: 0.813em;
+    font-size: 0.813rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 1px 1px #191919;
+}
+
+/*태블릿용 CSS*/
+@media all and (min-width: 768px) {
+
+    /*해더 영역 CSS*/
+    .header {
+        flex-direction: row;
+        /*        
+        박스들을 가로로 배치(row)하기 위한 설정입니다.
+        */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        /*        
+        요소의 겹쳐지는 순서를 설정하는 z-index 속성의 값을 10으로 설정합니다.
+        */
+        width: 15.625%;
+        /*
+        태블릿 환경에서 로고 너빗값은 120px입니다.
+        120px % 768px
+        가변 그리드 공식으로 얻은 값입니다.
+        */
+        padding: 0;
+        /*        
+        모바일 환경에서 설정해놓은 padding 값을 0으로 설정합니다.
+        */
+    }
+
+    .logo a {
+        display: block;
+        /*        
+        a태그는 inline 요소이기 때문에 높이와 너비를 지정할수 없습니다.
+        그래서 block으로 속성을 변경해서 사용하려는 설정입니다.
+        */
+        padding: 50px 0;
+        padding: 3.125rem 0;
+        /*        
+        위아래 padding 값을 50px,3.125rem으로 설정하는 설정입니다.
+        */
+    }
+
+    .nav {
+        position: relative;
+        /*        
+        메뉴 영역이 놓일 기준을 설정하기 위해 네비게이션을 뜻하는 <nav> 태그에 position 속성의 값을 relative로 설정하겨 상대적인 위치로 만들었습니다.
+        */
+        min-height: 80px;
+        min-height: 5.000rem;
+        background: #2ecc71;
+    }
+
+    .gnb {
+        display: none;
+        position: absolute;
+        /*        
+        절대적인 위치로 만들기 위해 absolute로 설정합니다.
+        */
+        top: 100%;
+        right: 0;
+        z-index: 20;
+        width: 40.104166666666667%;
+        /*
+        테블릿 환경에서 멘 목록 영역의 구조에서 너빗값은 308px입니다.
+        308px % 768px
+        가변 그리드 공식을 이용해서 얻은 값입니다.
+        */
+    }
+
+    .menu_toggle_btn {
+        top: 50%;
+        right: 30px;
+        right: 1.875rem;
+        z-index: 20;
+        margin-top: -15px;
+        margin-top: -0.938rem;
+        /*        
+        메뉴 토글 버튼의 위칫값이 위쪽은 50%로 설정되어 있기 때문에 정확히 중앙으로 정력하려면 자신의 세로 크기(mobile.css에서 확인 가능)의 절반 값인 15px을 음수의 마진값으로 설정해 줘야 합니다.
+        */
+    }
+
+
+    /*슬라이더 영역CSS*/
+    .slider_section {
+        width: 59.895833333333%;
+        /*        
+        태블릿 환경에서 슬라이더 영역의 구조의 너빗값은 460px입니다.
+        460px % 765px
+        */
+        height: auto;
+        /*        
+        슬라이더 영역에 높잇값은 더 이상 필요 없으므로 auto로 설정합니다.
+        */
+    }
+
+    .slider_section span {
+        position: relative;
+        /*        
+        요소들에 의해 버튼이 가려지지 않기 위해서 상대적인 위치를 부여했습니다.
+        */
+        z-index: 10;
+        /*        
+        요소가 겹쳐지지 않기 위해 z-index를 설정합니다.
+        */
+    }
+
+
+    /*최신 글 영역, 인기 글 영역 CSS*/
+    .latest_post_section {
+        order: 5;
+    }
+
+    .popular_post_section {
+        order: 6;
+    }
+
+    .latest_post_section,
+    .popular_post_section {
+        /*
+        모바일 환경에 맞춰진 너비를 테블릿에 맞게 조정합니다.
+        */
+        width: 41.6666666666666666667%;
+        /*
+        320px % 768px
+        */
+        padding-left: 5.20833333333333333333%;
+        padding-right: 5.20833333333333333333%;
+        /*        
+        40px % 768px
+        */
+    }
+
+
+    /*갤러리 영역 CSS*/
+    .gallery_section {
+        order: 8;
+        width: 71.3541666666666666667%;
+        /*        
+        548px % 768px
+        */
+        padding-left: 5.208333333333333333%;
+        padding-right: 5.208333333333333333%;
+        /*        
+        40px % 768px
+        모바일용 padding값을 재설정합니다.
+        */
+    }
+
+    .gallery_list {
+        display: flex;
+        /*        
+        테블릿 환경에서 플렉서블 박스로 사용하기 위해 display: flex를 부여합니다.
+        가로로 배치하기 위해 flex로 설정합니다.
+        */
+    }
+
+    .gallery_list li {
+        width: 47.008547008547008547008547%;
+        /*        
+        220px % 468px
+        */
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-left: 5.982905982905982905982905%;
+        /*        
+        28px % 468px
+        */
+        margin-top: 0;
+        /*        
+        모바일용에서 설정한 위쪽 마진값이 필요 없으므로 0으로 재설정합니다.
+        */
+    }
+
+
+    /*인기 검색어 영역 CSS*/
+    .rankup_section {
+        order: 4;
+        width: 40.10416666666667%;
+        /*        
+        308px % 768px
+        */
+        padding-left: 5.2083333333333%;
+        padding-right: 5.2083333333333%;
+        /*        
+        40px % 768px
+        */
+    }
+
+
+    /*배너 영역 CSS*/
+    .banner_section {
+        display: flex;
+        /*        
+        gallery부분이랑 같은 플렉서블 박스로 적용하기 위해 
+        display: flex로 설정합니다.
+        */
+        order: 9;
+        flex-direction: column;
+        /*        
+        플렉서블 박스를 세로로 정렬하기 위해 flex-direction: column으로 설정합니다.
+        */
+        width: 28.6458333333333333%;
+        /*        
+        220px % 768px
+        gallery 부분 빼고 남은 부분
+        gallery_section = 548px
+        */
+    }
+
+    .banner_section div {
+        flex: 1 1 0;
+        /*        
+        모바일 환경에서 만들었던 banner 부분을 테블릿 환경의 gallery 부분 높이가 맞지 않습니다. 
+        이것을 맞추기 위해 flex를 사용해서 동일한 비율로 맞췄습니다.
+        */
+        /*        
+        flex: flex-grow flex-shrink flex-basis;
+        flex: 증가너비 감소너비 기본너비;
+        flex: 1 2 px; === flex: 증가너비 감소너비 기본너비;
+        flex: 1 2; === flex: 증가너비 감소너비;
+        flex: 1 px; === flex: 증가너비 기본너비 (단위를 사용하면 flex-basis가 적용됩니다.);
+        */
+        /*        
+        flex-grow = item의 증가 너비 비율을 설정
+        flex-shrink = item의 감소 저비 비율을 설정
+        flex-basis = item의 (공간 배분 전) 기본 너비 설정
+        */
+    }
+
+    .banner_box_01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*        
+        테블릿환경에서 설정하기 전에 모바일 환경에서 설정한 값이 적용되어 있습니다.
+        모바일에서 적용한 값은 gallery 부분과 세로 정렬이기 때문에 
+        banner 부분만 신경써서 정렬을 맞추면 끝입니다.
+        하지만 tablet 환경에서는 gallery 부분과 같은 비율로 늘리다 보니 예상치 못한 빈 공간이 생가게 됩니다.
+        빈 공간을 체우기 위해 플렉서블 박스로 변경하고 
+        좌우 위아래 중앙 정렬을 해서 깔끔하게 만들었습니다.
+        */
+    }
+
+    .banner_box_01 a {
+        display: inline;
+        padding: 0;
+        /*        
+        <a>태그는 더 이상 블록처럼 작동할 필요가 없으므로 inline으로 설정합니다.
+        패딩값도 필요 없으니 0으로 설정합니다.
+        지금 .banner_box_01 a는 이미지 자체입니다.
+        */
+    }
+
+    .banner_box_02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*        
+        테블릿환경에서 설정하기 전에 모바일 환경에서 설정한 값이 적용되어 있습니다.
+        모바일에서 적용한 값은 gallery 부분과 세로 정렬이기 때문에 
+        banner 부분만 신경써서 정렬을 맞추면 끝입니다.
+        하지만 tablet 환경에서는 gallery 부분과 같은 비율로 늘리다 보니 예상치 못한 빈 공간이 생가게 됩니다.
+        빈 공간을 체우기 위해 플렉서블 박스로 변경하고 
+        좌우 위아래 중앙 정렬을 해서 깔끔하게 만들었습니다.
+        */
+    }
+
+    .banner_list {
+        padding: 0;
+        justify-content: flex-start;
+        /*        
+        모바일용에서 목록들을 간격을 두고 설정했던 justify-content 속성은 이제 필요 없어 초깃값인 flex-start로 재설정합니다.
+        */
+    }
+
+    .banner_list li:nth-child(2) {
+        margin: 0 14px;
+        /*        
+        오른쪽 왼쪽 margin을 14px으로 설정합니다.
+        */
+        margin: 0 0.875rem;
+    }
+
+
+    /*소셜네트워크 영역CSS*/
+    .social_section {
+        order: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16.666666666666%;
+        /*        
+        128px % 768px
+        */
+        padding: 0;
+    }
+
+    .social_list {
+        flex-direction: column;
+        /*        
+        세로로 배열하기 위한 설정
+        */
+        justify-content: flex-start;
+    }
+
+    .social_list li:nth-child(2) {
+        margin: 24px 0;
+        margin: 1.500rem 0;
+        /*        
+        위아래 24px/1.500rem으로 설정합니다.
+        */
+    }
+
+
+    /*푸터 영역 CSS*/
+    .footer p {
+        padding: 40px 0;
+        padding: 2.500rem 0;
+        /*        
+        padding 위아래 40px/2.500rem 으로 설정합니다.
+        */
+    }
+}
+
+/*PC용 CSS*/
+@media all and (min-width: 960px) {
+
+    /*인포메이션 영역 CSS*/
+    .info_section {
+        order: 0;
+        /*        
+        박스의 배치 순서를 변경하는 order 속성의 값을 초기화하기 위해 기본값인 0으로 설정합니다.
+        */
+        position: absolute;
+        /*        
+        인포메이션 영역을 오른쪽 상단에 배치하기 위해 절대적인 위치로 만들어주는 absolute로 설정합니다.
+        */
+        top: 30px;
+        top: 1.875rem;
+        right: 30px;
+        right: 1.875rem;
+        z-index: 30;
+        /*        
+        다른 요소들에 가려지지 않게 요소의 겹치는 순서를 설정하는 z-index 속성의 값을 30으로 설정합니다.
+        */
+        width: auto;
+        /*        
+        pc환경에서는 인포메이션 영역의 너빗값이 필요 없으므로 모바일용 css에서 설정한 너빗값을 없애기 위해 너빗값을 auto로 설정합니다.
+        */
+        border-bottom: 0;
+        /*        
+        아래쪽 border도 필요 없으니 border값을 0으로 설정합니다.
+        */
+    }
+
+    .info_list li {
+        width: auto;
+        /*        
+        모바일용에서 설정한 너빗값이 필요 없으므로 auto로 설정합니다.
+        */
+        margin-left: 15px;
+        margin-left: 0.625rem;
+    }
+
+    .info_list li a {
+        padding: 0;
+        /*        
+        모바일용에서 설정한 padding 값이 필요 없으므로 padding값을 0으로 설정합니다.
+        */
+    }
+
+
+    /*헤더 영역 CSS*/
+    .header {
+        order: 1;
+        /*        
+        pc환경에서 가장 상단에 배치되어 있는것을 확인할 수 있습니다.
+        order 속성을 사용해서 배치 순서를 1번째로 설정합니다.
+        */
+        justify-content: flex-end;
+        /*      
+        justify-content === 주축 방향으로 박스를 다양하게 배치하는 속성입니다.
+        가려지는것을 방지하기 위해 주축 방향을 끝점으로 배치(flex-end)하기 위한 설정입니다.
+        */
+        position: static;
+        /*        
+        상대적인 위치로 작동할 필요가 없으므로 posotion 속성의 값을 기본값인 static으로 설정합니다.
+        */
+    }
+
+    .logo {
+        width: 12.5%;
+        /*120px % 960px*/
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        /*        
+        세로 중앙으로 정렬시키기 위해 교차축 방향으로 박스를 다양하게 배치하는 align-items 속성의 값을 center로 설정해서 중앙 정렬을 시켰습니다.
+        */
+        position: static;
+        /*        
+        position === 요소의 위치를 설정하는 속성
+        메뉴 영역은 더 이상 상대적인 위치로 작동할 필요가 없으므로 속성의 기본값인 stactic으로 설정합니다.
+        */
+        width: 87.5%;
+        /*
+        <nav> 태그의 영역의 너빗값인 840px를 사용해서 가변그리드 공식을 썼습니다.
+        840px % 960px
+        */
+    }
+
+
+    /*헤더 영역 CSS*/
+    .gnb {
+        display: flex !important;
+        /*
+        !important === 중요도를 나타내는 속성입니다.
+        이 요소부터 실행해주세요.
+        */
+        flex-direction: row;
+        /*        
+        모바일용에서 세로로 배치한 것을 재설정하기 위해 메뉴 목록 영역의 박스의 배치 방향을 설정하는 flex-direction 속성의 값을 박스를 가로로 배치하는 값인 row로 설정합니다.
+        */
+        position: static;
+        /*        
+        요소가 더 이상 오른쪽 상단에 배치되어 있는 구조가 아니므로 요소의 위치를 설정하는 position 속성의 값을 기본값인 stactic으로 설정합니다.
+        */
+        width: 100%;
+        text-shadow: 0px 1px 1px #25ab5e;
+        /*        
+        text-shadow: 1 2 3 4;
+        1. 가로 길이
+        2. 세로 길이
+        3. 번짐 정도
+        4. 색상
+        */
+    }
+
+    .gnb li {
+        display: block;
+        /*        
+        li태그의 display 속성을 block으로 변경합니다.
+        */
+        margin-left: 5.20833333333333%;
+        /*
+        메뉴마다 왼쪽의 50px씩 크기의 간격이 있습니다.
+        50px % 840px
+        */
+        background: none;
+        /*        
+        모바일용에서 설정한 배경을 제거합니다.
+        */
+    }
+
+    .gnb li a {
+        width: auto;
+        /*        
+        모바일용에서 설정한 너비값을 초기화하기 위해 auto로 설정합니다.
+        */
+        padding: 0;
+        /*        
+        모바일에서 설정한 padding값을 초기화히기 위해 padding값을 0으로 재설정합니다.
+        */
+        text-indent: 0;
+    }
+
+    .gnb li span {
+        display: none;
+        /*
+        pc환경에서는 공간뿐만 아니라 이미지, 글자 모두 보일 필요가 없기때문에 text-indent를 사용하지 않고 display:none을 사용해서 완전히 보이지 않게 합니다.
+        */
+    }
+
+    .menu_toggle_btn {
+        display: none;
+        /*        
+        pc에서는 보일 필요없으므로 숨기겠습니다.
+        */
+    }
+
+
+    /*슬라이더 영역 CSS*/
+    .slider_section {
+        order: 2;
+        width: 50%;
+        /*
+        pc환경에서 슬라이더 영역은 480px입니다.
+        480px % 960px
+        */
+    }
+
+
+    /*최신 글 영역, 인기 글 영역 CSS*/
+    .latest_post_section,
+    .popular_post_section {
+        display: flex;
+        flex-direction: column;
+        /*        
+        title, latest_post_list 와 title, popular_post_section이
+        세로로 배치되어야 하므로 column으로 설정합니다.
+        */
+        align-items: center;
+        width: 30%;
+        /*
+        288px % 960px
+        */
+        padding-left: 1%;
+        padding-right: 1%;
+        /*        
+        테블릿에서 설정한 padding-left, padding-right 값이 필요 없으므로 초기화 시킵니다.
+        */
+        /*        
+        원래는 0으로 설정되어 있습니다.
+        제가 보기 좀 그래서 1%로 수정합니다.
+        */
+    }
+
+
+
+    /*갤러리 영역 CSS*/
+    .gallery_section {
+        order: 3;
+        width: 27.08333333333%;
+        /*260px % 960px*/
+    }
+
+    .gallery_list {
+        display: block;
+        /*        
+        테블릿에서 설정한 플렉서블 박스일 필요가 없기 때문에 block으로 변경합니다.
+        세로로 정렬하기 위해 block으로 재설정합니다.
+        */
+    }
+
+    .gallery_list li {
+        width: auto;
+        /*        
+        테블릿CSS에서 더이상 너빗갑이 필요 없으므로 auto로 재설정합니다.
+        */
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-top: 30px;
+        margin-top: 1.875rem;
+        margin-left: 0;
+        /*        
+        테블릿용에서 설정한 margin-left 값이 필요 없으므로 0으로 초기화 시킵니다.
+        */
+    }
+
+
+    /*인기 검색어 영역 CSS*/
+    .rankup_section {
+        display: flex;
+        /*        
+        인기 검색어 영역을 플렉서블 박스를 적용해야 하기 때문에 flex를 적용합니다.
+        */
+        flex-direction: column;
+        /*        
+        title과 rankup_list를 세로로 배치하기 위해 설정합니다.
+        */
+        justify-content: center;
+        /*        
+        가로 정렬을 가운데 정렬하는 설정입니다.
+        */
+        align-items: center;
+        /*        
+        세로 정렬을 가운데 정렬하는 설정입니다.
+        */
+        width: 22.916666666666667%;
+        /*220px % 960px*/
+        padding: 0;
+        /*        
+        테블릿 환경에서 설정한 padding 값이 필요 없어 재설정합니다.
+        */
+    }
+
+    .rankup_list {
+        display: block;
+        /*        
+        인기 검색어 목록 영역은 더 이상 플렉서블 박스로 작동하지 않아도 되므로 display: block 값으로 변경합니다.
+        rankup_list를 세로로 배치하기 위해 재설정합니다.
+        */
+    }
+
+    .rankup_list li {
+        width: auto;
+        /*        
+        pc환경에서 너빗값이 더 이상 필요 없으므로 태블릿용에서 설정한 너빗값을 초기화 하기 위해 auto로 설정합니다.
+        */
+        text-align: left;
+        counter-increment: rankup-counter;
+        /*
+        앞 쪽에 숫자를 넣기 위해 카운터 함수를 사용합니다.
+        카운터 명은 rankup-counter라고 설정합니다.
+        */
+    }
+
+    .rankup_list li:nth-child(2) {
+        margin-top: 15px;
+        margin-top: 0.938rem;
+        /*
+        모바일용에서 첫번째 요소와 두번째 요소에 margin-top값을 부여했습니다.
+        pc환경에서는 두번째 요소 margin-top:0이 아니라 15px이 필요하므로 재설정합니다.
+        */
+    }
+
+    .rankup_list li::before {
+        /*
+        <li> 태그에 카운터 함수를 사용해서 <li> 태그가 나오기 앞에 카운터 숫자를 넣기 위해 가상 선택자 before를 사용해서 목록을 선택합니다.
+        */
+        padding-right: 6px;
+        padding-right: 0.375rem;
+        /*        
+        카운터 숫자를 기준으로 오른쪽에 간격을 부여하는 것이니 
+        padding-right를 부여하는게 올바른 결정입니다.
+        */
+        text-transform: uppercase;
+        /*      
+        이건 숫자인데 왜 대문자로 바꾸는 기능을 추가했는지 의문이다.
+        */
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0px 1px 1px #428e9e;
+        content: counter(rankup-counter) '.';
+        /*
+        카운터 숫자를 넣기 위해 카운터 함수를 사용합니다.
+        counter() 앞 또는 뒤에 '',""을 사용해서 문자열을 추가할수 있습니다.
+        counter() 괄호 안에는 위에서 만들어 놓은 카운터명을 작성합니다.
+        */
+    }
+
+    .rankup_list li a {
+        display: inline;
+        /*
+        pc환경에서는 inline요소로 사용하기를 원합니다.
+        하지만 모바일환경에서 block으로 설정되어 있기때문에 pc환경에서 재설정합니다.
+        */
+        padding: 0;
+        border: 0;
+    }
+
+
+    /*배너 영역 CSS*/
+    .banner_section {
+        order: 7;
+        width: 22.91666666666667%;
+        /*220px % 960px*/
+    }
+
+
+    /*소셜 네트워크 영역 CSS*/
+    .social_section {
+        order: 8;
+        width: 17.083333333333333%;
+        /*164px % 960px*/
+    }
+
+
+    /*푸터 영역 CSS*/
+    .footer {
+        order: 9;
+    }
+
+    .footer p {
+        padding-left: 3.125%;
+        /*30px % 960px*/
+        text-align: left;
+    }
+
+}

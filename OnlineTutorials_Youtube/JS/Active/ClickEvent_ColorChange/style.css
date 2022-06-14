@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow: hidden;
+    background: #111 url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+}
+body img {
+}
+#bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    mix-blend-mode: hue;
+}

@@ -1,0 +1,289 @@
+
+/*======================== RESET CSS ========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: black;
+}
+
+/*======================== WRAP ========================*/
+
+#wrap {
+    width: 100%;
+    background: rgb(18, 33, 58);
+}
+
+
+/*======================== HEADER ========================*/
+
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.header_menubar {
+    width: 55%;
+    margin: 0 auto;
+}
+/* .header_menubar ul에 width 80%하는것 괜춘? */
+
+.header_menubar ul {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_menubar > ul > li {
+    font-size: 0;
+}
+
+.header_menubar > ul > li img {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.header_menubar > ul > li:hover img {
+    opacity: 1;
+}
+
+.header_menubar > ul > li:nth-child(12) {
+    width: 44px;
+    height: 44px;
+    background: url("/image/body_image/header/globalnav_search_image__cbllq1gkias2_large.svg") center center no-repeat;
+    background-position: 7.5px 0px;
+}
+
+
+
+/*======================== HEADER_IPHONE13 ========================*/
+
+.header_iPhone13_menubar {
+    width: 100%;
+    padding: 1vh 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(255, 255, 255, 0.8);
+}
+
+.header_iPhone13_box {
+    width: 55%;
+    margin: 0 auto;
+
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_iPhone13_box .left_box a {
+    font-size: 3vh;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.header_iPhone13_box .right_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_iPhone13_box .right_box a {
+    font-size: 1vh;
+    font-weight: 600;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.header_iPhone13_box > .right_box > li:nth-child(2) a {
+    margin: 0 2vh;
+    font-size: 1.1vh;
+    font-weight: 600;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.header_iPhone13_box > .right_box > li:nth-child(2):hover a {
+    color: rgb(0, 106, 226);
+}
+
+.header_iPhone13_box > .right_box button {
+    padding: 0.4vh 1.2vh;
+
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+    background: rgb(60, 151, 255);
+}
+
+.header_iPhone13_box > .right_box button:hover {
+    background: rgb(60, 151, 255, 0.8);
+}
+
+
+/* ========================================================== */
+/* ========================================================== */
+/* ========================================================== */
+
+
+/*======================== SECTION_2 ========================*/
+
+.section_2 {
+    width: 100%;
+    padding: 10vh 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: transparent;
+}
+
+.section_2_camera,
+.section_2_durability,
+.section_2_chip,
+.section_2_bettery {
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.section_2_camera p,
+.section_2_durability p,
+.section_2_chip p,
+.section_2_bettery p {
+    color: white;
+    font-size: 6vh;
+    font-weight: 900;
+    letter-spacing: -0.5vh;
+    line-height: 8vh;
+}
+
+
+
+/*======================== SECTION_3 ========================*/
+
+.section_3 {
+    width: 100%;
+    z-index: 9999;
+
+    background: url("/image/body_image/section02/hero_2_static_mask__8cc1u9mqsaaq_xlarge.png");
+    background: url("/image/body_image/section02/hero_2_static__w0gvqnaqsjm2_xlarge.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.section_3_image {
+}
+
+.section_3_image img {
+}
+
+/* ========================================================== */
+/* ========================================================== */
+
+/* 
+.section_3_bottom {
+    width: 100%;
+    height: 140vh;
+    padding-bottom: 30vh;
+
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: rgb(18, 33, 58);
+}
+
+.section_3_bottom_top {
+    width: 70vh;
+    text-align: center;
+    font-size: 6vh;
+    color: white;
+}
+
+.section_3_bottom_top p:first-child {
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.section_3_bottom_top h1 {
+    letter-spacing: -0.8vh;
+    line-height: 14vh;
+}
+
+.section_3_bottom_top p:nth-child(3) {
+    font-size: 3vh;
+    color: rgba(255, 255, 255, .56);
+    font-weight: bold;
+
+    margin-top: 7vh;
+}
+
+.section_3_bottom_a {
+    margin-top: 30vh;
+    width: 70%;
+    margin: 2vh auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_3_bottom_a a {
+    font-size: 3vh;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .56);
+    letter-spacing: -0.3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section_3_bottom_a img {
+    width: 3.5vh;
+    margin-left: 0.5vh;
+    opacity: 0.56;
+}
+
+.section_3_bottom_a a:nth-child(2) img {
+    width: 2vh;
+    margin-left: 0.5vh;
+}
+ */
+
+

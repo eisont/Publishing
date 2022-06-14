@@ -1,0 +1,182 @@
+@charset utf-8;
+
+/*웹폰트 CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*CSS 초기화*/
+* {
+    /*모든 태그 초기화합니다.*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    /*<body> 태그에 폰트 속성과 배경 속성 그리고 글자 행간 속성을 설정합니다.*/
+    font-family: 'Montserrat', DroidSans, AppleSDGothicNeo, sans-serif, Helvetica;
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    /*html5 태그들이 정상적으로 작동하도록 display 속성의 값을 block으로 설정합니다.*/
+    display: block;
+}
+
+nav ul,
+li {
+    /*ul,li 태그의 목록 스타일을 초기화합니다.*/
+    list-style: none;
+}
+
+a {
+    /*a태그를 기본값으로 초기화합니다.*/
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+img {
+    /*img 태그의 간격을 없애기 위해 vertical-align 속성값을 top으로 설정합니다.*/
+    vertical-align: top;
+}
+
+hr {
+    /*hr 태그를 기본값으로 초기화합니다.*/
+    display: block;
+    height: 2px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea {
+    /*input, textarea 태그를 초기화합니다.*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #757575;
+    color: #3f51b5;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    vertical-align: top;
+    border-radius: 0;
+    box-sizing: content-box;
+    appearance: none;
+}
+
+::-moz-input:placeholder,
+::-moz-textarea-placeholder {
+    color: #3f51b5;
+}
+
+::-webkit-input-placeholder,
+::-webkit-textarea-placeholder {
+    color: #3f51b5;
+}
+
+
+
+/*기본 스타일 CSS*/
+/*모바일용 CSS*/
+/*
+모든 요소들을 중앙으로 정렬하고 너빗값을 동일하게 만들기 위해 .container을 작성합니다.
+*/
+.container {
+    width: 90%;
+    max-width: 1132px;
+    margin: 0 auto;
+}
+
+.cfixed::after,
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+    /*    
+    플로트 속성으로 인해 발생하는 문제를 방지하기 위해 clear 속성값을 '양쪽'을 의미하는 both로 설정합니다.
+    */
+    /*    
+    플로트 속성으로 인해 발생하는 문제를 방지하기 위해 display 속성값을 block으로 지정하고, 가상 엘리먼트인 ::after의 경우 content 속성의 값이 없으면 적용되지 않으므로 쌍따옴표를 이용해 공백으로 적용합니다.
+    */
+}
+
+/*
+화면상에서는 보이지 않지만 필수적으로 입력해야 하는 태그들을 감추기 위해 .blind을 작성합니다.
+*/
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    /*
+    모든 환경에서 보이지는 않지만 반드시 입력해야 하는 HTML 태그들이 있습니다. 해당 요소들을 숨기기 위해 blind라는 클래스를 만들고, 요소의 위치를 설정하기 위한 position 속성의 값을 절대적인 위치로 만드는 absolute로 설정합니다.    
+    */
+}
+
+.sec-tit {
+    font-size: 42px;
+    color: #3f51b5;
+    font-weight: normal;
+}
+
+.divider {
+    width: 90%;
+    max-width: 1132px;
+    margin: 0 auto;
+    margin-top: 77px;
+    background: #eee;
+    /*    
+    프로모션 영역 밑에 구분선이 있습니다.
+    구분선의 스타일을 지정하기 위해 너빗값을 90%로 설정합니다.
+    
+    */
+}
+
+.m-divider {
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 77px;
+    background: #3f51b5;
+    /*
+    최근 작업영역을 확인해 보면 밑에 작은 구분선이 하나 있습니다.
+    해당 구분선의 스타일을 지정하기 위해 너빗값을 20px로 설정합니다.
+    */
+}
+
+
+@media all and (min-width: 768px) {
+
+    /*기본 CSS*/
+    .divider {
+        margin-top: 124px;
+    }
+
+    .m-divider {
+        margin-top: 124px;
+        /*        
+        테블릿 환경에서 구분선들을 보면 상단 마진값이 늘어난 것을 확인할수 있습니다. 
+        마진값을 조정하기 위해 마진값을 124px으로 설정합니다.
+        */
+    }
+}

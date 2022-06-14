@@ -1,0 +1,325 @@
+/*태블릿용 CSS*/
+@media all and (min-width: 768px) {
+
+    /*해더 영역 CSS*/
+    .header {
+        flex-direction: row;
+        /*        
+        박스들을 가로로 배치(row)하기 위한 설정입니다.
+        */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        /*        
+        요소의 겹쳐지는 순서를 설정하는 z-index 속성의 값을 10으로 설정합니다.
+        */
+        width: 15.625%;
+        /*
+        태블릿 환경에서 로고 너빗값은 120px입니다.
+        120px % 768px
+        가변 그리드 공식으로 얻은 값입니다.
+        */
+        padding: 0;
+        /*        
+        모바일 환경에서 설정해놓은 padding 값을 0으로 설정합니다.
+        */
+    }
+
+    .logo a {
+        display: block;
+        /*        
+        a태그는 inline 요소이기 때문에 높이와 너비를 지정할수 없습니다.
+        그래서 block으로 속성을 변경해서 사용하려는 설정입니다.
+        */
+        padding: 50px 0;
+        padding: 3.125rem 0;
+        /*        
+        위아래 padding 값을 50px,3.125rem으로 설정하는 설정입니다.
+        */
+    }
+
+    .nav {
+        position: relative;
+        /*        
+        메뉴 영역이 놓일 기준을 설정하기 위해 네비게이션을 뜻하는 <nav> 태그에 position 속성의 값을 relative로 설정하겨 상대적인 위치로 만들었습니다.
+        */
+        min-height: 80px;
+        min-height: 5.000rem;
+        background: #2ecc71;
+    }
+
+    .gnb {
+        position: absolute;
+        /*        
+        절대적인 위치로 만들기 위해 absolute로 설정합니다.
+        */
+        top: 100%;
+        right: 0;
+        z-index: 20;
+        width: 40.104166666666667%;
+        /*
+        테블릿 환경에서 멘 목록 영역의 구조에서 너빗값은 308px입니다.
+        308px % 768px
+        가변 그리드 공식을 이용해서 얻은 값입니다.
+        */
+    }
+
+    .menu_toggle_btn {
+        top: 50%;
+        right: 30px;
+        right: 1.875rem;
+        z-index: 20;
+        margin-top: -15px;
+        margin-top: -0.938rem;
+        /*        
+        메뉴 토글 버튼의 위칫값이 위쪽은 50%로 설정되어 있기 때문에 정확히 중앙으로 정력하려면 자신의 세로 크기(mobile.css에서 확인 가능)의 절반 값인 15px을 음수의 마진값으로 설정해 줘야 합니다.
+        */
+    }
+
+
+    /*슬라이더 영역CSS*/
+    .slider_section {
+        width: 59.895833333333%;
+        /*        
+        태블릿 환경에서 슬라이더 영역의 구조의 너빗값은 460px입니다.
+        460px % 765px
+        */
+        height: auto;
+        /*        
+        슬라이더 영역에 높잇값은 더 이상 필요 없으므로 auto로 설정합니다.
+        */
+    }
+
+    .slider_section span {
+        position: relative;
+        /*        
+        요소들에 의해 버튼이 가려지지 않기 위해서 상대적인 위치를 부여했습니다.
+        */
+        z-index: 10;
+        /*        
+        요소가 겹쳐지지 않기 위해 z-index를 설정합니다.
+        */
+    }
+
+
+    /*최신 글 영역, 인기 글 영역 CSS*/
+    .latest_post_section {
+        order: 5;
+    }
+
+    .popular_post_section {
+        order: 6;
+    }
+
+    .latest_post_section,
+    .popular_post_section {
+        /*
+        모바일 환경에 맞춰진 너비를 테블릿에 맞게 조정합니다.
+        */
+        width: 41.6666666666666666667%;
+        /*
+        320px % 768px
+        */
+        padding-left: 5.20833333333333333333%;
+        padding-right: 5.20833333333333333333%;
+        /*        
+        40px % 768px
+        */
+    }
+
+
+    /*갤러리 영역 CSS*/
+    .gallery_section {
+        order: 8;
+        width: 71.3541666666666666667%;
+        /*        
+        548px % 768px
+        */
+        padding-left: 5.208333333333333333%;
+        padding-right: 5.208333333333333333%;
+        /*        
+        40px % 768px
+        모바일용 padding값을 재설정합니다.
+        */
+    }
+
+    .gallery_list {
+        display: flex;
+        /*        
+        테블릿 환경에서 플렉서블 박스로 사용하기 위해 display: flex를 부여합니다.
+        가로로 배치하기 위해 flex로 설정합니다.
+        */
+    }
+
+    .gallery_list li {
+        width: 47.008547008547008547008547%;
+        /*        
+        220px % 468px
+        */
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-left: 5.982905982905982905982905%;
+        /*        
+        28px % 468px
+        */
+        margin-top: 0;
+        /*        
+        모바일용에서 설정한 위쪽 마진값이 필요 없으므로 0으로 재설정합니다.
+        */
+    }
+
+
+    /*인기 검색어 영역 CSS*/
+    .rankup_section {
+        order: 4;
+        width: 40.10416666666667%;
+        /*        
+        308px % 768px
+        */
+        padding-left: 5.2083333333333%;
+        padding-right: 5.2083333333333%;
+        /*        
+        40px % 768px
+        */
+    }
+
+
+    /*배너 영역 CSS*/
+    .banner_section {
+        display: flex;
+        /*        
+        gallery부분이랑 같은 플렉서블 박스로 적용하기 위해 
+        display: flex로 설정합니다.
+        */
+        order: 9;
+        flex-direction: column;
+        /*        
+        플렉서블 박스를 세로로 정렬하기 위해 flex-direction: column으로 설정합니다.
+        */
+        width: 28.6458333333333333%;
+        /*        
+        220px % 768px
+        gallery 부분 빼고 남은 부분
+        gallery_section = 548px
+        */
+    }
+
+    .banner_section div {
+        flex: 1 1 0;
+        /*        
+        모바일 환경에서 만들었던 banner 부분을 테블릿 환경의 gallery 부분 높이가 맞지 않습니다. 
+        이것을 맞추기 위해 flex를 사용해서 동일한 비율로 맞췄습니다.
+        */
+        /*        
+        flex: flex-grow flex-shrink flex-basis;
+        flex: 증가너비 감소너비 기본너비;
+        flex: 1 2 px; === flex: 증가너비 감소너비 기본너비;
+        flex: 1 2; === flex: 증가너비 감소너비;
+        flex: 1 px; === flex: 증가너비 기본너비 (단위를 사용하면 flex-basis가 적용됩니다.);
+        */
+        /*        
+        flex-grow = item의 증가 너비 비율을 설정
+        flex-shrink = item의 감소 저비 비율을 설정
+        flex-basis = item의 (공간 배분 전) 기본 너비 설정
+        */
+    }
+
+    .banner_box_01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*        
+        테블릿환경에서 설정하기 전에 모바일 환경에서 설정한 값이 적용되어 있습니다.
+        모바일에서 적용한 값은 gallery 부분과 세로 정렬이기 때문에 
+        banner 부분만 신경써서 정렬을 맞추면 끝입니다.
+        하지만 tablet 환경에서는 gallery 부분과 같은 비율로 늘리다 보니 예상치 못한 빈 공간이 생가게 됩니다.
+        빈 공간을 체우기 위해 플렉서블 박스로 변경하고 
+        좌우 위아래 중앙 정렬을 해서 깔끔하게 만들었습니다.
+        */
+    }
+
+    .banner_box_01 a {
+        display: inline;
+        padding: 0;
+        /*        
+        <a>태그는 더 이상 블록처럼 작동할 필요가 없으므로 inline으로 설정합니다.
+        패딩값도 필요 없으니 0으로 설정합니다.
+        지금 .banner_box_01 a는 이미지 자체입니다.
+        */
+    }
+
+    .banner_box_02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*        
+        테블릿환경에서 설정하기 전에 모바일 환경에서 설정한 값이 적용되어 있습니다.
+        모바일에서 적용한 값은 gallery 부분과 세로 정렬이기 때문에 
+        banner 부분만 신경써서 정렬을 맞추면 끝입니다.
+        하지만 tablet 환경에서는 gallery 부분과 같은 비율로 늘리다 보니 예상치 못한 빈 공간이 생가게 됩니다.
+        빈 공간을 체우기 위해 플렉서블 박스로 변경하고 
+        좌우 위아래 중앙 정렬을 해서 깔끔하게 만들었습니다.
+        */
+    }
+
+    .banner_list {
+        padding: 0;
+        justify-content: flex-start;
+        /*        
+        모바일용에서 목록들을 간격을 두고 설정했던 justify-content 속성은 이제 필요 없어 초깃값인 flex-start로 재설정합니다.
+        */
+    }
+
+    .banner_list li:nth-child(2) {
+        margin: 0 14px;
+        /*        
+        오른쪽 왼쪽 margin을 14px으로 설정합니다.
+        */
+        margin: 0 0.875rem;
+    }
+
+
+    /*소셜네트워크 영역CSS*/
+    .social_section {
+        order: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16.666666666666%;
+        /*        
+        128px % 768px
+        */
+        padding: 0;
+    }
+
+    .social_list {
+        flex-direction: column;
+        /*        
+        세로로 배열하기 위한 설정
+        */
+        justify-content: flex-start;
+    }
+
+    .social_list li:nth-child(2) {
+        margin: 24px 0;
+        margin: 1.500rem 0;
+        /*        
+        위아래 24px/1.500rem으로 설정합니다.
+        */
+    }
+
+
+    /*푸터 영역 CSS*/
+    .footer p {
+        padding: 40px 0;
+        padding: 2.500rem 0;
+        /*        
+        padding 위아래 40px/2.500rem 으로 설정합니다.
+        */
+    }
+}

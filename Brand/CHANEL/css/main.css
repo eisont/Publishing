@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    display: block;
+}
+body {
+    
+}
+#main {
+    width: 1500px;
+    margin: 0 auto;
+}
+header {
+    width: 1500px;
+    height: 200px;
+    background-color: antiquewhite;
+}
+header>img {
+    width: 200px;
+    margin: 20px auto;
+}
+header .menu1 {
+    width: 300px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+header .menu1>ul>li {
+    font-size: 13px;
+    float: left;
+    padding-left: 40px;
+}
+header .menu1>ul>li>a {
+    color: black;
+}
+header .menu1>ul>li:hover a {
+    font-weight: 900;
+    border-bottom: 3px solid black;
+}
+header .menu2 {
+    width: 180px;
+    float: right;
+}
+header .menu2>ul>li {
+    float: left;
+    padding-left: 10px;
+}
+header .menu2>ul>li>img {
+    width: 35px;
+}
+hr {
+    clear: both;
+    margin-top: 20px;
+    /*강의 보고 양 끝 제거*/
+}
+article1 {
+    width: 1500px;
+    height: 700px;
+    position: relative;
+}
+article1 .box1 {
+    width: 650px;
+    height: 500px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    position: absolute;
+}
+.subbox1 {
+    width: 420px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -210px;
+    position: absolute;
+}
+.subbox1>button {
+    width: 130px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: white;
+    border: 1px solid #cbcbcb;
+}
+article1 .box2 {
+    width: 850px;
+    height: 500px;
+    float: right;
+    position: relative;
+}
+article1 .box2 img{
+    width: 850px;
+    margin: 0 auto;
+    position: absolute;
+}
+article2 {
+    width: 750px;
+    height: 1125px;
+    float: left;
+    margin-top: 50px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article2 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article2 .box1>h3 {
+    float: left;
+}
+article2 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article2 .box2 {
+    background-image:url(img/2/N5_reveal_V3.adaptive.2560.png);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    margin-top: 20px;
+    height: 1000px;
+}
+article2 .text {
+    width: 200px;
+    height: 100px;
+    color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+article2 .text>button {
+    width: 130px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: white;
+    border: 1px solid #cbcbcb;
+}
+article3 {
+    width: 750px;
+    height: 400px;
+    float: right;
+    margin-top: 50px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article3 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article3 .box1>h3 {
+    float:left;
+}
+article3 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article3 .box2 {
+    width: 700px;
+    height: 350px;
+    float: left;
+    position: relative;
+}
+article3 .box2 img {
+    width: 350px;
+    float: left;
+    margin-bottom: 0;
+}
+article3 .box2 .subbox1 {
+    float: right;
+    position: absolute;
+}
+article3
+article4 {
+    width: 750px;
+    height: 550px;
+    float: right;
+    margin-top: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article4 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article4 .box1>h3 {
+    float:left;
+}
+article4 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article5 {
+    width: 750px;
+    height: 550px;
+    float: left;
+    margin-top: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article5 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article5 .box1>h3 {
+    float:left;
+}
+article5 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article6 {
+    width: 750px;
+    height: 550px;
+    float: right;
+    margin-top: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article6 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article6 .box1>h3 {
+    float:left;
+}
+article6 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article7 {
+    width: 750px;
+    height: 550px;
+    float: left;
+    margin-top: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article7 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article7 .box1>h3 {
+    float:left;
+}
+article7 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}
+article8 {
+    width: 750px;
+    height: 550px;
+    float: right;
+    margin-top: 25px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+article8 .box1 {
+    width: 700px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+article8 .box1>h3 {
+    float:left;
+}
+article8 .box1>p {
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+}

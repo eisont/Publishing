@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="blur">
+        <div class="content">
+            <h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate illum autem voluptas, molestiae id ab rem blanditiis eaque ullam necessitatibus quae.
+            </h2>
+            <img src="1920_section_INSIDE_03022021_KR.jpg">
+            <a href="#" onclick = toggle()>Read More</a>
+        </div>
+    </div>
+    <div id="popup">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repudiandae aliquam corporis. </h2>
+        <p>
+            Labore at dolorum architecto, beatae nemo exercitationem vitae explicabo atque officia voluptas iure aut molestiae cumque aliquid. Vitae, quos autem porro cumque beatae, delectus temporibus corporis iure dolorum odio voluptates. Sint neque numquam culpa, nobis molestias corporis incidunt laborum quaerat ratione eaque voluptatum non a cupiditate libero iusto autem sit. Iure ducimus voluptas culpa consectetur expedita vel ullam, sit, eveniet quas quis corrupti explicabo qui esse consequatur. Vitae in temporibus at sequi repudiandae eaque, necessitatibus dignissimos voluptatem sed, labore, ea dolor quos nesciunt nobis non assumenda placeat quia!
+        </p>
+        <a href="#" onclick = toggle()>Close</a>
+    </div>
+
+
+    <script type= text/javascript>
+    function toggle (){
+        var blur = document.getElementById("blur");
+        blur.classList.toggle('active');
+        var popup = document.getElementById("popup");
+        popup.classList.toggle('active');
+    }
+
+    </script>
+</body>
+</html>

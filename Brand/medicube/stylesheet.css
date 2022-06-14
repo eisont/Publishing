@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat","Noto Sans KR",sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style: none;
+}
+
+header {
+    border: 3px solid black;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+.header_0 {
+    width: 100%;
+    background-color: #c8002f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_0 img {
+    cursor: pointer;
+}
+
+.header_1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid lightgray;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_1_leftbox{
+    border: 3px solid blue;
+}
+.header_1_rightbox ul{
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_1_rightbox li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header_1_rightbox li:nth-child(2n) {
+    color: lightgray;
+}
+.header_mypage li {
+    font-size: 0;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    width: 60%;
+    border: 3px solid blue;
+    display: flex;
+    
+}
+nav li {
+    font-weight: 600;
+    list-style: none;
+    padding: 20px;
+}
+nav a:nth-child(2) {
+    color: #c8042f;
+}
+nav li:hover {
+    border-bottom: 1px solid black;
+}
+nav .rico {
+    display: inline-block;
+    background-color: white;
+    color: #c8042f;
+    border: 1px solid #c8042f;
+    border-radius: 11px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 500;
+    font-family:'"Montserrat","Noto Sans KR",sans-serif';
+    padding: 2px 7px;
+    vertical-align: middle;
+}
+
+
+section {
+    border: 3px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section_img{
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    background-image: url(https://themedicube.co.kr/web/upload/NNEditor/20210628/336fd200520e63deaacc9a4e090a2935.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid red;
+}
+.section_text {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+.section_mini_box {
+    width: 70%;
+}
+.section_mini_box ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.section_mini_box li{
+        
+}
+.section_mini_box_1 img{
+    width: 100%;
+}

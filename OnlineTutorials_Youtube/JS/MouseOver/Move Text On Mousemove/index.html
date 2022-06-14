@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Text On Mousemove</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <img src="img.jpg" alt="">
+        <span id="tooltip">Scoooooooollll</span>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    var spanText = document.getElementById('tooltip');
+    window.onmousemove = function(e) {
+        var x = e.clientX,
+            y = e.clientY;
+        spanText.style.top = (y + 20) + 'px';
+        spanText.style.left = (x + 20) + 'px';
+    }
+</script>
+
+</html>

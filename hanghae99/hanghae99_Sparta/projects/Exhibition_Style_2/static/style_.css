@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('https://www.gettt.com/data/goods/21/06/23/1000008090/1000008090_detail_093.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#wrap {
+    position: fixed;
+    width: 90%;
+    height: 90vh;
+    margin: 3% 3% 6% 3%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+#wrap::-webkit-scrollbar {
+    width: 1vh;
+    background-color: rgba(0,0,0,0.7);
+}
+#wrap::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.9);
+}
+#wrap .card {
+    position: relative;
+    width: 30%;
+    max-width: 500px;
+}
+
+#wrap .card > .btn-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 9;
+}
+#wrap .card .row .col-md-4{
+    position: relative;
+    width: 35%;
+    height: 190px;
+    overflow: hidden;
+}
+#wrap .card .row .col-md-4 img.img-fluid{
+}
+#wrap .card .row .col-md-8{
+    position: relative;
+    /*position: absolute;*/
+    width: 65%;
+    height: 100%;
+}
+
+
+
+.fullpageMenu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.fullpageMenu.active {
+    z-index: 9;
+    top: 0;
+    background-color: #111;
+    background-image: url("http://pagemail.kr/web/product/big/201712/183_shop1_527607.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullpageMenu.active .mypost {
+    position: relative;
+    width: 50%;
+    height: 60%;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fullpageMenu.active .mypost > .input-group {
+    width: 80%;
+    font-size: 1.5em;
+}
+.fullpageMenu.active .mypost > .input-group input {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.fullpageMenu.active .mypost .input-group span,
+.fullpageMenu.active .mypost .input-group input {
+    margin-top: 10px;
+    font-size: 1.05em;
+}
+
+.fullpageMenu.active .mypost .input-group span {
+    color: #fff;
+}
+
+.fullpageMenu.active .mypost .button_array{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullpageMenu.active .mypost .button_array button {
+    outline: none;
+    border: none;
+    margin: 0 1%;
+    padding: 5px 70px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    color: #000;
+    font-size: 1.7em;
+}
+
+.fullpageMenu.active .mypost .button_array button:nth-child(2) {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.menuicon {
+    z-index: 10;
+    position: fixed;
+    bottom: 3%;
+    right: 50%;
+    transform: translateX(50%);
+
+    width: 20%;
+    height: 8%;
+    padding: 10px 0;
+    font-size: 2em;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.menuicon:hover {
+    background: rgba(255,255,255);
+    color: #000;
+}
+.menuicon > p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menuicon.active {
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .banner {
+        display: none;
+    }
+}
+
+/*테블릿 기준*/
+@media (max-width: 769px) {
+    .fullpageMenu.active .mypost {
+        width: 60%;
+        height: 60%;
+    }
+    .fullpageMenu.active .mypost > .input-group input {
+        font-size: 0.8em;
+    }
+    .fullpageMenu.active .mypost .input-group span{
+        font-size: 0.8em;
+    }
+    .fullpageMenu.active .mypost .button_array button {
+        padding: 5px 35px;
+        font-size: 1.3em;
+    }
+    .fullpageMenu.active .mypost .button_array button:nth-child(2) {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    .menuicon {
+       font-size: 1.6em;
+    }
+    #wrap .card {
+        width: 47%;
+    }
+}
+
+/*겔럭시 노트 기준*/
+@media (max-width: 426px) {
+    .fullpageMenu.active .mypost {
+        width: 95%;
+        height: 50%;
+        padding: 2%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .fullpageMenu.active .mypost > .input-group {
+        width: 95%;
+        font-size: 1.5em;
+    }
+
+    #wrap {
+        position: relative;
+        width: 90%;
+        overflow-y: scroll;
+    }
+    #wrap > .card{
+        width: 95%;
+    }
+
+    .menuicon {
+        width: 40%;
+        font-size: 1.7em;
+    }
+}
+
+/*아이폰 se 기준*/
+@media (max-width: 376px) {
+    #wrap {
+        position: relative;
+        width: 90%;
+        overflow-y: scroll;
+    }
+    #wrap > .card{
+        width: 95%;
+    }
+
+    .menuicon {
+        width: 40%;
+        font-size: 1.7em;
+    }
+
+}

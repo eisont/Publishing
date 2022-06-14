@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightgray;
+}
+
+.mainBox {
+    position: relative;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    alingn-items: center;
+}
+.mainBox div {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+
+}
+.mainBox div h1 {
+    font-size: 4vh;
+    transform: translateY(-40px);
+    opacity: 0;
+}
+.mainBox div ion-icon {
+    font-size: 7vh;
+    transition: 0.5s;
+}
+
+.mainBox div ion-icon:hover {
+    font-size: 10vh;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transform: translateY(0px);
+    opacity: 1;
+}
+

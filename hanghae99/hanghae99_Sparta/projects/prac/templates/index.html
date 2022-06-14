@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--jquery와 연결을 해야 ajax를 요청할 수 있습니다.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function hey(){
+            // $.ajax({
+            //     type: "GET",
+            //     url: "/test?title_give=봄날은간다",
+            //     //=/test라는 창구에 가는데 title_give라는 이름으로 봄날은 간다라는 데이터를 내가 가지고 갈게
+            //     //title_give(=주민등록번호)라는 이름으로 봄날은간다(숫자)를 가지고 간다.
+            //     //   /test라는 창구는 어떻게 만들까?
+            //     data: {},
+            //     success: function (response) {
+            //         //위 코드가 잘 실행이 된다면 console에 띄워볼게
+            //         console.log(response)
+            //     }
+            // })
+
+            $.ajax({
+                type: "POST",
+                url: "/test",
+                data: {title_give: '봄날은간다'},
+                success: function (response) {
+                    console.log(response['msg'])
+                }
+            })
+            //우리가 버튼을 누르면 hey()함수가 불리고
+        //ajax 요청을 합니다.
+        // /test라는 창구에 ajax 요청을 합니다.
+        //post 요청으로
+        }
+    </script>
+</head>
+<body>
+    <h1>나의 첫 웹페이지!</h1>
+    <button onclick="hey()">버튼을 만들자!!!</button>
+</body>
+</html>

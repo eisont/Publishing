@@ -1,0 +1,445 @@
+/*reset.css*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    text-align: center;
+}
+
+
+
+#wrap {
+    width: 90%;
+    height: 100vh;
+
+    margin: 0 auto;
+
+    background: rgb(68, 68, 68);
+}
+
+.box1 {
+    width: 100%;
+    height: 10vh;
+
+    background: red;
+}
+
+.box2 {
+    order: 1;
+    width: 50%;
+    height: 10vh;
+    float: left;
+
+    background: blue;
+}
+
+.box3 {
+    order: 2;
+    width: 50%;
+    height: 10vh;
+    float: right;
+
+    background: purple;
+}
+
+.box1_top {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.box4 {
+    width: 50%;
+    height: 10vh;
+
+    background: lightgreen;
+}
+
+.box5 {
+    width: 50%;
+    height: 10vh;
+
+    background: gray;
+}
+
+.box2_top {
+    width: 30%;
+
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.box6 {
+    width: 50%;
+    height: 10vh;
+
+    background: pink;
+}
+
+.box7 {
+    width: 50%;
+    height: 10vh;
+
+    background: lightgray;
+}
+
+.box8 {
+    width: 50%;
+    height: 10vh;
+
+    background: olivedrab;
+}
+
+.box3_top {
+    width: 70%;
+    height: 30vh;
+
+    float: right;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: azure;
+}
+
+.box9 {
+    width: 50%;
+
+    background: peru;
+}
+
+.box10 {
+    width: 50%;
+
+    background: salmon;
+}
+
+.box11 {
+    width: 15%;
+    height: 30vh;
+
+    margin-left: 30vh;
+    overflow: hidden;
+
+    position: absolute;
+
+    background-color: blanchedalmond;
+}
+
+.orderBox {
+    width: 100%;
+    height: 5vh;
+
+    overflow: hidden;
+
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: white;
+}
+
+.box12 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: azure;
+}
+
+.box13 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: beige;
+}
+
+.box14 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: blanchedalmond;
+}
+
+.box15 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: blueviolet;
+}
+
+.box16 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: cadetblue;
+}
+
+.box17 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: chocolate;
+}
+
+.box18 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: cyan;
+}
+
+.box19 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: darkkhaki;
+}
+
+.box20 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: darkorchid;
+}
+
+.box21 {
+    float: left;
+    width: 10%;
+    height: 5vh;
+
+    background-color: deeppink;
+}
+
+
+.flexbox {
+    width: 100%;
+    height: 10vh;
+
+    overflow: hidden;
+
+    font-weight: bold;
+    background: #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flexBox {
+    width: 100%;
+    height: 5vh;
+
+    background: green;
+}
+
+.flexbox>.box12 {
+    width: 10%;
+    height: 5vh;
+
+    background-color: azure;
+}
+
+.flexbox .box13 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: beige;
+}
+
+.flexbox .box14 {
+    width: 10%;
+    height: 5vh;
+
+    background-color: blanchedalmond;
+}
+
+.flexbox .box15 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: blueviolet;
+}
+
+.flexbox .box16 {
+    width: 10%;
+    height: 5vh;
+
+    background-color: cadetblue;
+}
+
+.flexbox .box17 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: chocolate;
+}
+
+.flexbox .box18 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: cyan;
+}
+
+.flexbox .box19 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: darkkhaki;
+}
+
+.flexbox .box20 {
+
+    width: 10%;
+    height: 5vh;
+
+    background-color: darkorchid;
+}
+
+.flexbox .box21 {
+    width: 10%;
+    height: 5vh;
+
+    background-color: deeppink;
+}
+
+.flexbox2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    ;
+}
+
+.sub_flexbox {
+    width: 10%;
+    flex-direction: column;
+
+    background: yellow;
+}
+
+.box22 {
+    width: 100%;
+    height: 4vh;
+
+    background-color: firebrick;
+}
+
+.box23 {
+    width: 100%;
+    height: 4vh;
+
+    background-color: fuchsia;
+}
+
+.box24 {
+    width: 100%;
+    height: 4vh;
+
+    background-color: gold;
+}
+
+.box25 {
+    width: 100%;
+    height: 4vh;
+
+    background-color: indianred;
+}
+
+.box26 {
+    width: 100%;
+    height: 4vh;
+
+    background-color: indigo;
+}
+
+.sub_flexbox2 {
+    width: 15%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 5px;
+
+    background: yellow;
+}
+
+.box27 {
+    width: 33%;
+    height: 20vh;
+    background: lavender;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box28 {
+    width: 33%;
+    height: 20vh;
+    background: lemonchiffon;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box29 {
+    width: 33%;
+    height: 20vh;
+    background: lightgrey;
+
+    text-align: center;
+    line-height: 20vh;
+}
+
+.sub_flexbox3 {
+    width: 75%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+
+    background-color: mistyrose;
+}
+
+.sub_flexbox3 div {
+    width: 14%;
+}
+
+.sub_flexbox3 div:nth-child(odd) {
+    background-color: olive;
+}
+
+.sub_flexbox3>div:nth-child(even) {
+    background: #fff;
+}

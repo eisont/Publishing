@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScripts</title>
+    <link rel="stylesheet" href="stylesheet_2.css">
+    <style>
+        .bible_title {
+            background: gray;
+            padding-left: 3vh;
+
+            text-align: left;
+            display: none;
+            color: white;
+            list-style: none;
+        }
+
+        .hint {
+            font-weight: 900;
+            color: white;
+        }
+
+        #click {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #6E5725;
+            border: 3px solid #EFCF97;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <div class="left_menu">
+
+            <div class="left_menu_bar">
+
+                <div class="left_menu_title">
+
+                    <a href="../main.html">
+                        <img src=images/javascripts.png>
+                        <p>Javascripts</p>
+                    </a>
+
+                </div>
+
+                <div class="left_menu_section">
+
+                    <ul class="left_menu_section_1">
+
+                        <li><a href="../index.html">알아두면 좋은 단어들</a></li>
+                        <li><a href="../what.html">JS로 무엇을 할 수 있을까?</a></li>
+
+                    </ul>
+
+                    <ul class="left_menu_section_2">
+
+                        <li><a href="1.html">1. prompt 함수</a></li>
+                        <li><a href="2.html">2. alert 함수</a></li>
+                        <li><a href="3.html">3. 간단한 실행문 만들기</a></li>
+                        <li><a href="4.html">4. console.log() </a></li>
+                        <li><a href="5.html">5. 변수</a></li>
+                        <li><a href="6.html">6. let과 const</a></li>
+                        <li><a href="7.html">7. 조건문 if문, alert</a></li>
+                        <li><a href="8.html">8. 연산자 사용하기</a></li>
+                        <li><a href="9.html">9. 제어문 알아보기</a></li>
+                        <li><a href="10.html">10. switch문 </a></li>
+                        <li><a href="11.html">11. for문</a></li>
+                        <li><a href="12.html">12. 중첩 for문</a></li>
+                        <li><a href="13.html">13. 중첩 for문 -구구단-</a></li>
+                        <li><a href="14.html">14. while문 -팩토리얼-</a></li>
+                        <li><a href="15.html">15. continue문, if문</a></li>
+                        <li><a href="16.html">16. function 함수</a></li>
+                        <li><a href="17.html">17. function 매개변수</a></li>
+                        <li><a href="18.html">18. event 이벤트</a></li>
+                        <li><a href="19.html">19. object 객체</a></li>
+                        <li><a href="20.html">20</a></li>
+                        <li><a href="21.html">21</a></li>
+                        <li><a href="22.html">22</a></li>
+                        <li><a href="23.html">23</a></li>
+                        <li><a href="24.html">24</a></li>
+                        <li><a href="25.html">25</a></li>
+                        <li><a href="26.html">26</a></li>
+                        <li><a href="27.html">27</a></li>
+                        <li><a href="28.html">28</a></li>
+                        <li><a href="29.html">29</a></li>
+                        <li><a href="30.html">30</a></li>
+                        <li><a href="31.html">31</a></li>
+                        <li><a href="32.html">32</a></li>
+                        <li><a href="33.html">33</a></li>
+                        <li><a href="34.html">34</a></li>
+                        <li><a href="35.html">35</a></li>
+                        <li><a href="36.html">36</a></li>
+                        <li><a href="37.html">37</a></li>
+                        <li><a href="38.html">38</a></li>
+                        <li><a href="39.html">39</a></li>
+                        <li><a href="40.html">40</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <footer class="left_footer">
+                <p>Copyright &copy; <span>ninetheme </span>2021</p>
+            </footer>
+
+        </div>
+
+        <div class="right_section">
+            <h1>3. 간단한 실행문 만들기</h1>
+            <hr>
+            <a href="3-example.html" id="click">값 입력하기</a>
+            <hr>
+            <ol>
+                <li>if문을 사용해서 성인인지 아닌지 판별해보세요.</li>
+                <li>
+                    <p>
+                        prompt() 함수, if문 , document.write()를 이용해보세요.
+                    </p>
+                </li>
+                <hr>
+                <a href="" class="hint">힌트</a>
+                <ol class="bible_title">
+                    
+                </ol>
+            </ol>
+        </div>
+
+    </div>
+    <script>
+        var hint = document.querySelector(".hint");
+
+        hint.addEventListener("mouseover", function() {
+            document.querySelector(".bible_title").style.display = "block";
+        })
+        hint.addEventListener("mouseout", function() {
+            document.querySelector(".bible_title").style.display = "none";
+        })
+        /*==================================================================*/
+
+        var click = document.querySelector("#click");
+
+        click.addEventListener("click", function() {
+        })
+
+        /*==================================================================*/
+
+    </script>
+</body>
+
+</html>

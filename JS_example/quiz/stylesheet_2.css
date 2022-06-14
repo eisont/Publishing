@@ -1,0 +1,205 @@
+/*====== reset css ======*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*====== wrap ======*/
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+    background: #473400;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/*====== LEFT MENU ======*/
+.left_menu {
+    width: 20%;
+    height: 100%;
+    overflow-x: hidden;
+
+    background: #473400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_menu::-webkit-scrollbar {
+    width: 1vh;
+    background-color: #473400;
+}
+
+.left_menu::-webkit-scrollbar-thumb {
+    background-color: #EFCF97;
+}
+
+.left_menu_bar {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left_menu_title {
+    width: 100%;
+    height: 15vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_menu_title a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #EFCF97;
+}
+
+.left_menu_title img {
+    width: 11vh;
+}
+
+.left_menu_title p {
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #EFCF97;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.left_menu_section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.left_menu_section_1 {
+    width: 100%;
+}
+
+.left_menu_section_2 {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.left_menu_section_1 li {
+    width: 100%;
+    border-top: 0.2vh solid #EFCF97;
+}
+
+.left_menu_section_2 li {
+    width: 50%;
+    border-top: 0.2vh solid #EFCF97;
+}
+.left_menu_section_2 li:nth-child(2n+1) {
+    background-color: #6d5000;
+}
+.left_menu_section_2 li:nth-child(4n+1) {
+    background-color: #473400;
+}
+.left_menu_section_2 li:nth-child(2n) {
+    background-color: #6d5000;
+}
+.left_menu_section_2 li:nth-child(4n) {
+    background-color: #473400;
+}
+
+.left_menu_section_1 > li:hover,
+.left_menu_section_2 > li:hover {
+    background: #987D49;
+}
+
+.left_menu_section_1 a,
+.left_menu_section_2 a {
+    color: #EFCF97;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2vh;
+
+    padding: 2vh 1vh 2vh 1vh;
+}
+
+.left_menu_section_2 a{
+    font-size: 1.5vh;
+
+    padding: 1vh 1vh 1vh 1vh;
+}
+
+.left_footer {
+    width: 100%;
+
+    font-size: 2vh;
+    text-align: center;
+    color: #EFCF97;
+
+    margin-bottom: 3vh;
+}
+
+.left_footer span {
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+}
+
+
+
+
+
+.right_section {
+    width: 80%;
+    height: 100vh;
+    overflow-x: hidden;
+    line-height: 7vh;
+
+    background-color: #6E5725;
+
+    padding: 5vh 0 0 5vh;
+    color: #EFCF97;
+}
+
+.right_section::-webkit-scrollbar {
+    width: 1vh;
+    background-color: #473400;
+}
+
+.right_section::-webkit-scrollbar-thumb {
+    background-color: #EFCF97;
+}
+
+.right_section .bible_title {
+    line-height: 3vh;
+    
+    padding: 2vh;
+}

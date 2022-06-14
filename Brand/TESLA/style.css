@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.5);
+}
+header img {
+  margin-right: 15px;
+  height: 25px;
+}
+
+header ul {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+header ul.menu2 {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+}
+header ul:nth-child(4) {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+header ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 이 코드가 화면 내리기 중요 코드 */
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+.container .section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 이 코드가 화면 내리기 중요 코드 */
+  scroll-snap-align: start;
+}
+.container .section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-250px);
+}
+.container .section .content h1 {
+  font-size: 2.5em;
+}
+.container .section .content a {
+  color: #777;
+}
+
+.container .section .button {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .section .button .button1,
+.container .section .button .button2 {
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 50px;
+  text-align: center;
+}
+.container .section .button .button1 {
+  margin-right: 50px;
+  background: #777;
+}
+.container .section .button .button1 a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #fff;
+}
+.container .section .button .button2 {
+  background: #fff;
+}
+.container .section .button .button2 a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #111;
+}
+
+.container .section:nth-child(1) {
+  background: lightgray url(ModelS.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+.container .section:nth-child(1) .content {
+  transform: translateY(-240px);
+  color: #fff;
+}
+.container .section:nth-child(1) .content a {
+  color: #dbdbdb;
+}
+.container .section:nth-child(2) {
+  background: green url(Model3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .section:nth-child(3) {
+  background: yellow url(ModelX.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .section:nth-child(4) {
+  background: rgb(13, 198, 226) url(ModelY.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .section:nth-child(5) {
+  background: rgb(30, 0, 128) url(Cybertruck.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .section:nth-child(6) {
+  background: rgb(128, 0, 0) url(Powerwall.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

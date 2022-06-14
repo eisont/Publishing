@@ -1,0 +1,569 @@
+/*모바일용 CSS*/
+
+/*
+왜 속성값을 px단위와 rem 단위 두개로 나눠서 사용하나요? === 폴백기법
+em을 쓰는 경우 상속 문제에 걸립니다. rem단위를 쓰자니 하위 브라우저에서는 작동하지 않는 문제가 있다.
+이런 문제를 해결하기 위해 먼저 px 단위를 사용해 값을 입력하고, 바로 이어서 rem 단위를 사용해 값을 입력합니다.
+그래서 rem을 지원하지 않는 브라우저에서는 px단위를 인식합니다.
+최신 브라우저에서는 px단위를 적용하고 이어서 rem 단위가 나오므로 최종적으로 rem단위를 적용합니다. 
+결국 최신 브라우저에서는 최신 기술을 사용하고 하위 브라우저에서는 최신 기술은 사용할 수 없지만 정상적으로 작동은 합니다.
+이런 기법을 대비책이라는 의미의 폴백(fallback)기법이라고 합니다.
+*/
+
+/*
+css값을 덮어 사용합니다.
+더 그 위에 덮기         pc css
+그 위에 덮기          tablet css
+제일 밑바탕            모바일 css
+모바일 css를 기본으로 하고 tablet css를 덮어서 사용하고 그 위에 pc css를 덮어서 사용합니다.
+*/
+
+
+/*인포메이션 CSS*/
+.info_section {
+    order: 1;
+    /*    
+    인포메이션 영역이 가장 위에 배치되므로 박스의 배치 순서를 변경하는 order 속성의 값을 1로 설정합니다.
+    */
+    width: 100%;
+    background: #2ecc71;
+    border-bottom: 1px solid #39d67c;
+    /*아래쪽 직선을 1px만큼 만듭니다.*/
+}
+
+.info_list {
+    display: flex;
+    /*
+    플렉서블 박스로 작동하게끔 설정합니다.
+    */
+}
+
+.info_list li {
+    width: 25%;
+    text-align: center;
+}
+
+.info_list li a {
+    display: block;
+    /*
+    a태그에 높이값을 부여하기 위해 display 값을 block으로 수정합니다.
+    a태그는 원래 inline 요소입니다.
+    */
+    padding: 15px 0;
+    padding: 0.928rem 0;
+    /*    
+    위아래 패딩값을 15px/0.928rem으로 설정합니다.
+    */
+}
+
+
+/*헤더 영역 CSS*/
+
+.header {
+    order: 2;
+    /*    
+    헤더 영역의 배치 순서를 2번째로 설정합니다.
+    */
+    display: flex;
+    /*    
+    헤더 영역을 플렉서블 박스로 설정하기 위한 설정입니다.
+    */
+    flex-direction: column;
+    /*    
+    세로로 배치(column)하기 위한 속성입니다.
+    */
+    position: relative;
+    /*    
+    오른쪽 상단에 배치하기 위한 상대적인 위치 설정 relative 속성을 설정합니다.
+    */
+    width: 100%;
+    /*
+    너빗값을 100%로 설정합니다.
+    */
+}
+
+.logo {
+    order: 1;
+    /*    
+    배치순서를 첫번째로 하기 위한 설정입니다.
+    */
+    width: 100%;
+    /*    
+    너빗값을 100%로 설정합니다.
+    */
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    /*    
+    위아래 padding을 30px으로 설정합니다.
+    */
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    line-height: 21px;
+    line-height: 1.313rem;
+    text-align: center;
+    text-transform: uppercase;
+    /*    
+    .logo에 있는 모든 text를 대문자로 바꿔줍니다.
+    */
+    background: #2ecc71;
+    text-shadow: 0px 1px 1px #25ab5e;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 거리
+    2. 세로 거리
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.nav {
+    order: 2;
+    /*    
+    배치 순서를 2번째로 하기 위한 설정입니다.
+    */
+    width: 100%;
+}
+
+.gnb {}
+
+.gnb li {
+    display: flex;
+    /*    
+    플렉서블 박스로 설정하기 위한 속성입니다.
+    */
+    background: #2c3e50;
+}
+
+.gnb li a {
+    width: 80%;
+    /*    
+    너빗값을 80%으로 설정합니다.
+    */
+    padding: 20px 0;
+    padding: 1.250rem 0;
+    /*    
+    위아래 padding을 20px/1.250rem으로 설정합니다.
+    */
+    font-size: 0.938em;
+    font-size: 0.938rem;
+    text-indent: 20px;
+    text-indent: 1.250rem;
+    /*    
+    글자를 들여쓰기 위한 text-indent를 20px으로 설정합니다.
+    */
+    font-weight: bold;
+    text-transform: uppercase;
+    /*    
+    글자를 대문자로 변경해줍니다.
+    */
+}
+
+.gnb li span {
+    width: 20%;
+    text-indent: -9999px;
+    /*    
+    글자 들여쓰기를 -9999px으로 설정함으로써 숨기는 기능을 합니다.
+    display: none;을 쓰면 안될까?
+    display:none을 쓰면 이미지, 공간 모두 사라집니다.
+    하지만 text-indent를 쓰면 이미지, 공간들은 살아있고 글자만 사라지기 때문에 토글 버튼을 적용하기에 좋습니다.
+    */
+    background: url(../images/s_images/sub_menu_toggle_btn.png) center center no-repeat;
+    cursor: pointer;
+    /*    
+    마우스 커서의 상태를 설정하기 위한 cursor 속성입니다.
+    */
+}
+
+.menu_toggle_btn {
+    display: block;
+    /*    
+    display: block으로 설정함으로써 높이와 너비를 지정할수 있게 해줍니다.
+    */
+    width: 30px;
+    width: 1.875rem;
+    height: 30px;
+    height: 1.875rem;
+    position: absolute;
+    /*    
+    요소의 위치를 설정하기 위해서 절대적인 위치를 설정하는 absolute를 설정합니다.
+    */
+    top: 10px;
+    top: 0.625rem;
+    right: 10px;
+    right: 0.625rem;
+    text-indent: -9999px;
+    /*    
+    글자만을 들여쓰기합니다. 글자만 숨깁니다.
+    */
+    background: url(../images/s_images/menu_toggle_btn.png) no-repeat;
+    /*    
+    글자를 숨긴 위치에 배경 이미지를 설정합니다.
+    */
+    cursor: pointer;
+}
+
+
+/*슬라이더 영역 CSS*/
+.slider_section {
+    /*
+    이전 버튼, 다음 버튼을 나타내는 class
+    */
+    display: flex;
+    justify-content: space-between;
+    /*    
+    붙어있는 이미지가 띄어지는 현상이 벌어지네?
+    justify-content: space-between의 기능인가?
+    */
+    align-items: center;
+    order: 3;
+    /*    
+    세번째로 배치하기 위한 설정
+    */
+    width: 100%;
+    height: 300px;
+    height: 18.750rem;
+    background: url(../images/p_images/slider_01.jpg) center center no-repeat;
+}
+
+.slider_section span {
+    width: 34px;
+    width: 2.125rem;
+    height: 39px;
+    height: 2.438rem;
+    text-indent: -9999px;
+    /*    
+    글자를 숨기고 이미지들만 보이게 하기 위해서 text-indent에 음숫값을 넣어 지정합니다.
+    */
+    background: url(../images/s_images/slider_arrow.png) no-repeat;
+    cursor: pointer;
+}
+
+span.prev_btn {
+    margin-left: -10px;
+    margin-left: -0.625rem;
+    /*    
+    약간 바깥쪽으로 옮기기 위해 margin-left에 음숫값을 넣어 옮겼습니다.
+    */
+    background-position: 0 0;
+}
+
+span.next_btn {
+    margin-right: -10px;
+    margin-right: -0.625rem;
+    /*    
+    바깥쪽으로 옮기기 위해 margin-right에 음숫값을 넣어 옮겼습니다.
+    바깥쪽이기 때문에 margin을 사용합니다.
+    */
+    /*    
+    padding을 넣어도 되지 않을까?
+    padding은 안쪽 너비를 지정하는 것이기 때문에 바깥쪽으로 옮기지를 못합니다.
+    */
+    background-position: -34px 0;
+    /*
+    전체 이미지의 어느 영역을 보여줄지 설정합니다.
+    이미지의 크기는 68px입니다. 
+    왼쪽 버튼, 오른쪽 버튼 하나씩의 크기는 34px입니다.
+    그 크기 안에 왼쪽버튼, 오른쪽버튼 두개가 모두 들어있습니다.
+    그 중에서 오른쪽 버튼을 쓰기 위해서는 background-positon을 사용해서 쓰려는 위치를 선정해서 사용해야 합니다.
+    background-position: 1 2;
+    1. 좌 우를 지정하는 영역입니다.
+    양수 = 왼쪽 영역을 보여줍니다.
+    음수 = 오른쪽 영역을 보여줍니다.
+    2. 위 아래를 지정하는 영역입니다.
+    양수 = 위쪽 영역을 보여줍니다.
+    음수 = 아래쪽 영역을 보여줍니다.
+    위 코드 해석 === 오른쪽 영역 34px 정도를 보여줍니다. 
+    */
+}
+
+
+/*최신 글 영역, 인기 글 영역 CSS*/
+.latest_post_section {
+    order: 4;
+    /*    
+    모바일 환경의 구조로 보면 네번째와 다섯번째로 나란히 배치되어 있습니다.
+    네번째로 배치하기 위한 설정입니다.
+    */
+    background: #ffc40f;
+    text-shadow: 0px 1px 1px #b98e0b;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.popular_post_section {
+    order: 5;
+    /*    
+    5번째로 배치하기 위한 설정입니다.
+    */
+    background: #a660c2;
+    text-shadow: 0px 1px 1px #714185;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.latest_post_section,
+.popular_post_section {
+    padding: 40px 12.5%;
+    padding: 2.500rem 12.5%;
+    /*
+    40px % 320px
+    위아래 40px/2.500rem을 설정
+    왼쪽 오른쪽 12.5%을 설정
+    */
+}
+
+.title {
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.latest_post_list li,
+.popular_post_list li {
+    margin-top: 15px;
+    margin-top: 0.938rem;
+    padding-left: 14px;
+    padding-left: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url(../images/s_images/post_circle_icon.png) left center no-repeat;
+    /*    
+    background 이미지를 가로 왼쪽 정렬, 세로 가운제 정렬, 배경이미지 반복여부 X
+    */
+}
+
+.latest_post_list li:first-child,
+.popular_post_list li:first-child {
+    margin-top: 0;
+    /*    
+    이미 title 값에 margin-bottom이 부여되어 있어 첫번째 요소 margin-top 값이 필요없어 값을 초기화합니다.
+    */
+}
+
+
+/*갤러리 영역 CSS*/
+.gallery_section {
+    order: 6;
+    padding: 50px 12.5%;
+    padding: 3.125rem 12.5%;
+    /*
+    40px % 320px
+    위아래 50px/3.125rem
+    왼쪽 오른쪽 12.5%
+    */
+    text-align: center;
+    background: #e65d5d;
+    text-shadow: 0px 1px 1px #c43434;
+    /*    
+    text-shadow: 1 2 3 4;
+    1. 가로 길이
+    2. 세로 길이
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.gallery_section img {
+    width: 100%;
+    /*    
+    위에서 padding 값을 부여했기때문에 width: 100%를 지정해도 꽉찬 화면이 나오지 않는 것입니다.
+    */
+    max-width: 100%;
+    /*    
+    최대 너빗값을 지정합니다.
+    */
+    border-radius: 3px;
+    /*    
+    박스가 약간 둥글게 보이기 위해 border-radius에 조금 값을 부여합니다.
+    */
+    box-shadow: 0px 1px 1px #c43434;
+    /*    
+    box-shadow: 1 2 3 4;
+    1. 오른쪽 위치
+    2. 하단 위치
+    3. 번짐 정도
+    4. 색상
+    */
+}
+
+.gallery_list li:nth-child(2) {
+    margin-top: 30px;
+    margin-top: 1.875rem;
+    /*    
+    두번째 그림에 margin-top을 부여합니다.
+    */
+}
+
+.gallery_list li figcaption {
+    margin-top: 20px;
+    margin-top: 1.250rem;
+    /*    
+    글자에 margin-top을 부여합니다.
+    */
+    font-size: 1.188em;
+    font-size: 1.188rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*인기 검색어 영역 CSS*/
+.rankup_section {
+    order: 7;
+    padding: 40px 12.5%;
+    padding: 2.500rem 12.5%;
+    /*
+    40px % 320px
+    */
+    background: #219af7;
+    text-shadow: 0px 1px 1px #1974ba;
+}
+
+.rankup_list {
+    display: flex;
+    /*    
+    목록이 가로로 여려줄 배치되어 있습니다.
+    가로로 배치하기 위해 flex로 설정합니다.
+    */
+    flex-wrap: wrap;
+    /*    
+    여러줄로 배치하기 위해 wrap으로 설정합니다.
+    */
+    justify-content: space-between;
+}
+
+.rankup_list li {
+    width: 47.916666666666666666667%;
+    /*
+    115px % 240px
+    값을 부여한 만큼 한 줄의 나타나는 요소의 갯수도 정해집니다.
+    대략 50%로 설정했기 때문에 한줄에 2개만 나타납니다.
+    */
+    margin-top: 15px;
+    margin-top: 0.938rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    /*    
+    박스 안에서 
+    중앙정렬
+    대문자로 변경
+    글씨체 굵게
+    */
+}
+
+.rankup_list li:first-child,
+.rankup_list li:nth-child(2) {
+    margin-top: 0;
+    /*    
+    첫번째 요소와 두번째 요소가 한줄에 같이 있기 때문에 동일하게 margin-top:0 을 부여합니다.
+    */
+}
+
+.rankup_list li a {
+    display: block;
+    /*    
+    a태그는 inline요소이기 때문에 높이나 공간에 사이즈를 부여할 수 없습니다.
+    그래서 display: block으로 변경한 후에
+    공간에 사이즈를 부여하게 만듭니다.
+    */
+    padding: 10px 0;
+    padding: 0.625rem 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+
+/*배너 영역 CSS*/
+.banner_section {
+    order: 8;
+}
+
+.banner_box_01 {
+    background: #e6567a;
+}
+
+.banner_box_01 a {
+    display: block;
+    /*    
+    가로 높이 값을 부여하기 위해 원래 속성 inline을 block으로 재설정합니다.
+    */
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    /*    
+    padding 위 아래 값을 30px/1.875rem으로 설정합니다.
+    */
+    text-align: center;
+}
+
+.banner_box_02 {
+    background: #c44968;
+}
+
+.banner_list {
+    display: flex;
+    /*    
+    플렉서블 박스로 설정함으로써 가로 배열으로 설정합니다.
+    */
+    justify-content: space-between;
+    padding: 30px 12.5%;
+    padding: 1.875rem 12.5%;
+    /*
+    40px % 320px
+    padding 값 위아래 30px/1,875rem으로 설정
+    padding 값 좌우 12.5%으로 설정
+    */
+}
+
+
+/*소셜 네트워크 영역 CSS*/
+.social_section {
+    order: 9;
+    padding: 24px 12.5%;
+    padding: 1.500rem 12.5%;
+    /*
+    40px % 320px
+    padding 위아래 24px/1.500rem 
+    padding 좌우 12.5%
+    */
+    background: #fff;
+}
+
+.social_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*푸터 영역 CSS*/
+.footer {
+    order: 10;
+    width: 100%;
+    background: #474747;
+}
+
+.footer p {
+    padding: 20px;
+    padding: 1.250rem;
+    font-size: 0.813em;
+    font-size: 0.813rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 1px 1px #191919;
+}

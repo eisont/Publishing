@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변환하기</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="title_0">
+            <div class="title_1">
+                <div class="title_2"></div>
+            </div>
+        </div>
+        <div class="body_total">
+            <div class="mainBx">
+                <img src="img/21_22Cruise/FSH-1636031949490-vipslideshowmobile09.jpg" alt="" class="mainImg">
+            </div>
+            <div class="body_img">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949830996-055i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949741529-pushlook.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949818378-001i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949834908-063i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636035632490-012i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636031918940-vipslideshowmobile05.jpg" alt=""
+                                    class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949769048-teaser.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949822620-006i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1635949829742-018i01.jpg" alt="" class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636031891022-vipslideshowmobile01.jpg" alt=""
+                                    class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636031912239-vipslideshowmobile04.jpg" alt=""
+                                    class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636031898287-vipslideshowmobile02.jpg" alt=""
+                                    class="small">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="image">
+                                <img src="img/21_22Cruise/FSH-1636031904575-vipslideshowmobile03.jpg" alt=""
+                                    class="small">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const bigPic = document.querySelector(".mainImg");
+        const smallPics = document.querySelectorAll(".small");
+
+        bigPic.addEventListener("click", function () {
+            bigPic.setAttribute("src", "")
+        })
+
+        for (let i = 0; i < smallPics.length; i++) {
+            smallPics[i].onclick = showBig;
+        }
+
+        function showBig() {
+            const newPic = this.src;
+            bigPic.setAttribute("src", newPic);
+        }
+    </script>
+</body>
+
+</html>

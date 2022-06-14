@@ -1,0 +1,77 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+
+.mypic {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://ww.namu.la/s/de9629352eaeb33763af9adb12b70859444e8b501f20cedf5b5495bf57407517f390bdf1b03c75844faaf70ee38906d5e532edb06693041a6eac4aadd61845b8a039cb6b9f4f3d962d0250bf94875b9b55f6c013833111c127f8b606d18b3b40');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypic h1 {
+    font-size: 3em;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.mypost {
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto 20px auto;
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+    display: none;
+}
+.mypost .input-group {
+    margin-top: 10px;
+}
+.mypost .button_array {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.mypost .button_array button {
+    margin: 0 5px;
+}
+
+#comment-list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+#comment-list .card {
+    width: 24%;
+    margin: 10px 0;
+}
+
+#comment-list .card > .imgBx{
+    max-width: 262px;
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#comment-list .card > .imgBx::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+}
+
+#comment-list .card > .imgBx::-webkit-scrollbar-thumb {
+    background-color: #000;
+}

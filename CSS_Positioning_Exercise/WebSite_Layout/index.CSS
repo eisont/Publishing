@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+body {
+    font-family: 'Verdana'; /*글꼴 설정*/
+    font-size: 16px; /*글자 크기 설정*/
+    line-height: 28px; /*줄 높이 설정*/
+    color: #393939; /*글자 색상 설정*/
+}
+header {
+    width: 100%; /*가로 설정*/
+    overflow: hidden; /*보여주기 설정*/
+    background-color: #02918c; /*배경색상 설정*/
+    position: relative; /*위치 설정*/
+    position: fixed; /*왜 두번 설정했는지 모르겠다.*/
+    z-index: 9999;/*이건 뭐였지?*/
+}
+header>div {
+    width: 1400px; /*가로 크기 설정*/
+    overflow: hidden; /*보여주기 정도 설정*/
+    position: relative; /*위치설정*/
+    margin: 0 auto;
+    background-color: blueviolet;
+}
+header>div>a {
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #cfc91d;
+    background-color: blue;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 26px;
+}
+header>div>a>span {
+    color: white;
+}
+header>div>ul {
+    width: 870px;
+    overflow: hidden;
+    float: right;
+    background-color: brown;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+header>div>ul>li {
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-right: 30px;
+    float: left;
+    line-height: 26px;
+    background-color: blue;
+    font-weight: 700;
+    border-radius: 10px;
+    transition-duration: 0.7s;
+}
+header>div>ul>li:last-child {
+    margin-right: 0px;
+}
+harder>div>ul>li>a {
+    color: white;
+    display: block;
+}
+header>div>ul>li:hover {
+    background-color: white;
+}
+header>div>ul>li:hover a {
+    color: red;
+}
+.main {
+    width: 100%;
+    background-image: url();
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+.main>h3 {
+    margin-top: 130px;
+    font-size: 24px;
+}
+.main>h1 {
+    margin-top: 30px;
+    font-size: 60px;
+}
+.main>p {
+    margin-top: 40px;
+    font-size: 14px;
+}
+.main>button {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    font-size: 14px;
+    display: block;
+    border: none;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    cursor: pointer;
+    background-color: #cfc91d;
+    color: black;
+    font-weight: 900;
+}
+.text {
+    width: 1327px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    background-color: yellow;
+}
+.text>h2 {
+    margin-top: 50px;
+    font-size: 32px;
+    color: #02918c;
+    position: relative;
+    background-color: lightgray;
+}
+.text>p {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color: lightgray;
+}
+.memo {
+    overflow: hidden;
+    margin-top: 40px;
+}
+.memo>div {
+    float: left;
+    width: 250px;
+    overflow: hidden;
+    padding: 40px;
+    background-color: lavender;
+    text-align: center;
+    border-right: 1px solid lightgray;
+}
+.memo>div:last-child {
+    border-right: none;
+}
+.meoo>div>img {
+    width: 250px;
+    display: inline-block;
+}
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: lightgray;
+}

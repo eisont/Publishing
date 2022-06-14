@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--카톡으로 링크를 보낼때 나타나는 사진, 문구 출력 코드-->
+        <meta property="og:title" content="항해99 6기 3조 아이디어 저장소"/>
+        <meta property="og:description" content="아이디어를 공유해봐요!!!"/>
+        <meta property="og:image" content='https://swchurch.org/data/file/column/3543613611_JHnz9mTD_e0075435.jpg'>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+
+        <title>항해99 6기 3조 공유 사이트</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="mypic">
+            <h1>항해99 6기 3조 <br> 공유 사이트</h1>
+            <h5><span>팀장:</span> 한상훈 <span>조원:</span> 유현준, 김치훈, 김인오 </h5>
+            <p>서울현재기온: <span id="temp">36</span>도</p>
+            <button onclick='open_bt()' type="button" class="btn btn-light">작성하기</button>
+        </div>
+        <div class="mypost" id="text_bx">
+            <select class="form-select" id="name" aria-label="Default select example">
+                <option selected>항해99 6기 3조</option>
+                <option value="한상훈">한상훈</option>
+                <option value="유현준">유현준</option>
+                <option value="김치훈">김치훈</option>
+                <option value="김인오">김인오</option>
+            </select>
+            <div class="form-floating">
+                <textarea id="idea" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">공유 사이트 설명</label>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">공유하고 싶은 url</span>
+                <input type="text" id="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                       placeholder="공유하고 싶은 사이트 url 입력하세요.">
+            </div>
+            <div class="button_array">
+                <button onclick="save_comment()" type="button" class="btn btn-dark">작성하기</button>
+                <button onclick="close_bt()" type="button" class="btn btn-secondary">닫기</button>
+            </div>
+        </div>
+
+        <div id="comment-list">
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div id="comment_bx">-->
+<!--                <div class="card left_bx border-secondary mb-3">-->
+<!--                    <div class="card-header">작성자 이름</div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text">아이디어 설명하기</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <div class="card right_bx">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="#" class="card-img-top" alt="...">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+        </div>
+
+        <script>
+            function open_bt() {
+                $('#text_bx').show()
+            }
+
+            function close_bt() {
+                $('#text_bx').hide()
+            }
+
+            $(document).ready(function () {
+                //로딩이 되자마자 set_temp(), show_comment()가 실행됩니다.
+                set_temp()
+                show_comment()
+            });
+
+            function set_temp() {
+                $.ajax({
+                    //get 방식
+                    type: "GET",
+                    url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+                    data: {},
+                    success: function (response) {
+                        $('#temp').text(response['temp'])
+                    }
+                })
+            }
+
+            function save_comment() {
+                // 1
+                //우리가 입력한 값을 변수로 저장합니다.
+                let idea = $('#idea').val()
+                let name = $('#name').val()
+                let url = $('#url').val()
+
+                $.ajax({
+                    //post 방식
+                    type: 'POST',
+                    url: '/IdeaSite',
+                    //2
+                    //우리가 저장한 변수를 서버로 보냅니다.
+                    data: {idea_give: idea, name_give: name, url_give: url},
+                    success: function (response) {
+                        //7
+                        //서버에서 받은 메시지를 사용합니다.
+                        alert(response['msg'])
+                        //8
+                        //새로고침하게 합니다.
+                        window.location.reload()
+                    }
+                });
+            }
+
+            function show_comment() {
+                $.ajax({
+                    //get 방식
+                    type: "GET",
+                    url: "/IdeaSite",
+                    //서버에 보낼 데이터는 없으니 빈 공간으로 냅둡니다.
+                    data: {},
+                    success: function (response) {
+                        //2
+                        //서버에서 정보를 받아서 사용합니다.
+                        let rows = response['orders']
+                        for (let i = 0; i < rows.length; i++) {
+                            let idea = rows[i]['idea']
+                            let name = rows[i]['name']
+                            let url = rows[i]['url']
+
+                            let temp_html = `<div id="comment_bx">
+                                                <div class="card left_bx border-secondary mb-3">
+                                                    <div class="card-header">${name}</div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">${idea}</p>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <a href="${url}" class="card-link">${url}</a>
+                                                    </div>
+                                                </div>
+                                            </div>`
+                            $('#comment-list').append(temp_html)
+                        }
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

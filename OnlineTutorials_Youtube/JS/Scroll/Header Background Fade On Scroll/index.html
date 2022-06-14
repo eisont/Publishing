@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Background Fade On Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div id="bg"></div>
+    </div>
+    <section>
+        <h2>Header Background Fade On Scroll</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam harum tempora, explicabo,
+            quibusdam suscipit soluta accusamus fugit possimus laborum quos molestias. Expedita facere at, quasi id
+            consequuntur numquam dignissimos illum consectetur assumenda nostrum tempora nulla laboriosam sunt,
+            asperiores voluptatum! Voluptatem suscipit officiis numquam quaerat id eaque. Laborum rerum nesciunt ducimus
+            ea incidunt. Nisi corrupti quae magnam magni provident incidunt esse mollitia tempora iste nostrum at
+            impedit sequi earum molestiae doloremque culpa ut, fugiat nulla deleniti! Eum consequuntur voluptas autem
+            quam vero ex atque accusantium maxime voluptates nulla doloribus unde, aliquid nihil numquam laborum.
+            Deserunt, nobis? Ipsam architecto hic, quam, odit adipisci quibusdam voluptas officia delectus asperiores
+            iure animi consequuntur totam quae recusandae autem est unde quo placeat cum blanditiis repellat. Ea et
+            ducimus eius voluptatibus a nemo corporis eveniet quo libero provident voluptas dolorum reiciendis quas
+            ratione ut, omnis tempore ab minus fugiat sequi? Provident reiciendis perspiciatis cumque totam dolorum
+            veritatis dicta eaque est voluptatem, soluta aperiam sed consequatur commodi et obcaecati optio aspernatur
+            recusandae placeat laudantium quisquam sit facilis. Omnis, velit. Quia accusantium illum vero possimus,
+            dolores consectetur dolore ullam aut quae magnam, inventore est eveniet, exercitationem et impedit. Ab
+            temporibus hic saepe laudantium, debitis nobis rem amet aliquam dolores officiis atque explicabo cupiditate
+            rerum omnis eos quos voluptatum optio eveniet modi. Aliquid mollitia dolore harum in veritatis omnis qui
+            enim earum odit fugiat unde ad, quos molestiae dignissimos quisquam! Nulla, fugiat necessitatibus? Alias,
+            magnam esse nulla sequi rem, facere amet vitae inventore, illo illum cum. Blanditiis facere similique vitae
+            temporibus sequi assumenda adipisci neque pariatur veniam magnam voluptates aliquam tenetur officia minus ad
+            ullam fuga dolor cupiditate ducimus dolorum eos tempora nemo, sint rerum! Soluta, nisi laborum quibusdam
+            odit ipsam repellat placeat nulla illo itaque, accusamus animi natus impedit explicabo pariatur culpa rem
+            minus officiis? Praesentium autem odio ullam modi facere illo molestiae voluptatum quibusdam porro. Error
+            totam nobis, et molestiae ratione delectus ea maiores, qui quisquam cumque nihil ipsa explicabo accusantium
+            blanditiis, ab quibusdam esse similique. Molestiae perferendis eligendi, deleniti, totam, impedit possimus
+            iure iste quasi veniam nesciunt incidunt aliquid blanditiis veritatis hic a sed odit. Ullam alias nam,
+            temporibus vel quaerat impedit eaque reiciendis magnam labore aliquid quo, repellendus, voluptatum
+            accusantium. Quam cum sunt quo sequi asperiores voluptas, placeat sint doloribus saepe iusto odio eius
+            voluptates quaerat numquam beatae accusamus cupiditate facilis suscipit? Facere exercitationem minus vitae
+            at aut ullam? Neque hic ullam aspernatur debitis nesciunt cumque maxime asperiores! Atque pariatur facere
+            aliquam debitis, impedit architecto nobis soluta repellat laboriosam, iste dolor quibusdam deleniti natus
+            voluptas? Unde facere, soluta ipsa quisquam cupiditate ducimus laudantium voluptatem optio culpa quasi
+            doloribus, officia mollitia repellendus animi in illo reiciendis illum nostrum voluptate magnam aut
+            similique. Corporis fugiat iure quia culpa, magnam ipsum qui perferendis alias odio cumque praesentium
+            recusandae ex ducimus aspernatur, reiciendis illo. Quis, similique? Expedita corrupti officia eaque id, fuga
+            eos enim repudiandae eligendi obcaecati. Vel delectus doloribus dolorum corporis repudiandae praesentium
+            quos amet accusamus? Quasi obcaecati eaque voluptatibus eius exercitationem doloribus iure nostrum corrupti
+            hic.
+        </p>
+    </section>
+
+    <script type="text/javascript">
+        var headerBg = document.getElementById('bg');
+        window.addEventListener('scroll', function(){
+            headerBg.style.opacity = 1 -window.pageYOffset/550+''
+            headerBg.style.top = +window.pageYOffset+'px'
+            headerBg.style.backgroundPositionY = -window.pageYOffset/2+'px'
+        })
+    </script>
+</body>
+
+</html>

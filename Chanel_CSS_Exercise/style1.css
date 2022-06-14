@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: white;
+}
+
+.title_0 {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_1 {
+    width: 70%;
+    height: 10vh;
+    margin: 1vh auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.title_2 {
+    width: 37vh;
+    height: 10vh;
+
+    background-image: url(img/logo/logo_chanel.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.body_img {
+    width: 70%;
+    height: 90vh;
+
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_img .image {
+    width: 100%;
+    height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body_img .image img{
+    height: 90%;
+}
+
+.body_img .sub_img {
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body_img .sub_img img {
+    height: 70%;
+
+    margin: 0 10px;
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 200vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container div {
+    width: 5vh;
+    padding: 5vh;
+    margin: 1vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 3px solid gray;
+    border-radius: 30px;
+    
+    transition: 0.2s;
+    
+}
+
+.container div:hover {
+    background: black;
+    color: white;
+    font-size: 5vh;
+    font-weight: bold;
+    
+    border: 10px dotted white;
+}

@@ -1,0 +1,141 @@
+/*PC용 CSS*/
+@media all and (min-width: 960px) {
+
+    /*인포메이션 영역 CSS*/
+    .info_section {
+        order: 0;
+        position: absolute;
+        top: 30px;
+        top: 1.875rem;
+        right: 30px;
+        right: 1.875rem;
+        z-index: 30;
+        width: auto;
+        border-bottom: 0;
+    }
+
+    .info_list li {
+        width: auto;
+        margin-left: 15px;
+        margin-left: 0.625rem;
+    }
+
+    .info_list li a {
+        padding: 0;
+    }
+
+
+    /*헤더 영역 CSS*/
+    .header {
+        order: 1;
+        justify-content: flex-end;
+        position: static;
+    }
+
+    .logo {
+        width: 12.5%;
+        /*120px % 960px*/
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        position: static;
+        width: 87.5%;
+        /*840px % 960px*/
+    }
+
+    .gnb {
+        display: flex !important;
+        /*!important? 이건 무엇인가???*/
+        flex-direction: row;
+        position: static;
+        width: 100%;
+        text-shadow: 0px 1px 1px #25ab5e;
+    }
+
+    .gnb li {
+        display: block;
+        margin-left: 5.20833333333333%;
+        /*50px % 840px*/
+        background: none;
+    }
+
+    .gnb li a {
+        width: auto;
+        padding: 0;
+        text-indent: 0;
+    }
+
+    .gnb li span {
+        display: none;
+    }
+
+    .menu_toggle_btn {
+        display: none;
+    }
+
+
+
+    /*서브 헤더 영역 CSS*/
+    .sub_header_section {
+        order: 2;
+    }
+
+
+    /*콘텐츠 영역 CSS*/
+    .content_section {
+        order: 3;
+        padding: 60px;
+        padding: 3.750rem;
+    }
+
+    .content_row_2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .content_row_2 article {
+        width: 30%;
+        /*252px % 840px*/
+        margin: 0;
+    }
+
+    .para {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .para p {
+        width: 47.61904761904762%;
+        /*400px % 840px*/
+        margin: 0;
+    }
+
+
+
+    /*gallery.html 파일 전용*/
+    .gallery_list li {
+        width: 23.92857142857143%;
+        /*201px % 840px*/
+        margin-top: 12px;
+        margin-top: 0.750rem;
+    }
+
+    .gallery_list li:nth-child(3),
+    .gallery_list li:nth-child(4) {
+        margin-top: 0;
+    }
+
+    /*푸터 영역 CSS*/
+    .footer {
+        order: 4;
+    }
+
+    .footer p {
+        padding-left: 3.125%;
+        /*30px % 960px*/
+        text-align: left;
+    }
+
+}

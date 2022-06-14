@@ -1,0 +1,151 @@
+/*meet*/
+
+#meet_wrap {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet_total {
+    width: 70%;
+    height: 80%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.meet_header_total {
+    width: 100%;
+    height: 20%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.meet_header_box {
+    width: 100%;
+    height: 95%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.meet_header_left_box {
+    width: 50%;
+    height: 100%;
+}
+.meet_header_left_text_1 {
+    width: 100%;
+    height: 50%;
+    
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.meet_header_left_text_1 p {
+    display: inline-block;
+    font-family: 'Familiar Pro', 'sans-serif';
+    font-size: 50px;
+}
+.meet_header_left_text_2 {
+    width: 90%;
+    height: 50%;
+    
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+}
+.meet_header_left_text_2 p {
+    width: 100%;
+    height: 73%;
+    font-size: 24px;
+    line-height: 39px;
+    
+    display: inline-block;
+    font-family: 'Source Serif Pro','sans-serif';
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.meet_header_right_box {
+    width: 38%;
+    height: 100%;
+    overflow: hidden;
+    
+    position: relative;
+    
+}
+.meet_header_right_text_1 {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.meet_header_right_text_1 p {
+    color: rgba(0,0,0,0.8);
+    display: inline-block;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Source Serif Pro','sans-serif';
+    
+}
+.meet_header_right_text_2 {
+    width: 100%;
+    height: 80px;
+
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    
+}
+.meet_header_right_text_2 p {
+    color: rgba(0,0,0,0.8);
+    display: inline-block;
+    font-size: 17px;
+    line-height: 25px;
+    font-family: 'Source Serif Pro','sans-serif';
+    
+}
+
+.meet_section_total {
+    width: 100%;
+    height: 70%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.meet_section_box {
+    width: 100%;
+    height: 80%;
+}
+.meet_section_box ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /*justify-content=space-between을 사용할 경우 중간에 공간이 생긴다.*/
+}
+.meet_section_box li {
+    width: 25%;
+    height: 50%;
+    background-color: #ebebeb;
+}
+.meet_section_box li:nth-child(2n+5) {
+    background-color: lightgray;
+}
+.meet_section_box li:nth-child(2) {
+    background-color: lightgray;
+}
+.meet_section_box li:nth-child(4) {
+    background-color: lightgray;
+}

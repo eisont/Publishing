@@ -1,0 +1,228 @@
+@charset 'utf-8';
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    /*1rem이 14px이라는 뜻입니다.*/
+}
+
+body {
+    overflow-x: hidden;
+    /*    가로 스크롤을 없애는 코드*/
+    color: rgb(29, 29, 31);
+    letter-spacing: 0.05em;
+    background: white;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(29, 29, 31);
+    text-decoration: none;
+}
+
+.global-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    padding: 0 1rem;
+}
+
+.local-nav {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 1rem;
+}
+
+.global-nav-links,
+.local-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.global-nav-links {
+    justify-content: space-between;
+}
+
+.local-nav-links .product-name {
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.loval-nav-links a {
+    font-size: 0.8rem;
+}
+
+.local-nav-links a:not(.product-name) {
+    /*:not()는 앞 코드에 맞긴한데 not에 있는 코드 제외해주세요.*/
+    margin-left: 2em;
+}
+
+.scroll-section {
+    border: 3px solid red;
+    padding-top: 50vh;
+    /*뷰포트(:인터넷 창의 크기) 그 높이의 절반만큼 padding top을 준다는 말입니다.*/
+}
+
+#scroll-section-0 h1 {
+    font-size: 4rem;
+    /*현재 1rem이 14px로 설정되어 있습니다.*/
+    text-align: center;
+}
+
+.main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    height: 3em;
+    /*3em의 의미는 밑에 2.5rem의 크기의 3배를 적용하겠다.라는 의미 */
+    font-size: 2.5rem;
+}
+
+.main-message p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.main-massage small {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+}
+
+#scroll-section-2 .main-massage {
+    font-size: 3.5rem;
+}
+
+.description {
+    padding: 0 1rem;
+    /*위 아래 0
+    좌 우 1rem  
+    */
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.description strong {
+    float: left;
+    margin-right: 0.2em;
+    /*글자크기의 0.2배를 하고 싶습니다.라는 뜻입니다.
+    42px*0.2=8.4px이 됩니다. 
+    */
+    font-size: 3rem;
+    /*14px*3=42px이 됩니다.*/
+    color: rgb(29, 29, 31);
+}
+
+.desc-message {
+    width: 50%;
+    font-weight: bold;
+}
+
+.pin {
+    width: 1px;
+    height: 100px;
+    background: rgb(29, 29, 31);
+}
+
+.mid-message {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: #888;
+}
+
+.mid-message strong {
+    color: rgb(29, 29, 31);
+
+}
+
+.canvas-caption {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    background: darkorange;
+}
+
+.sticky-elem {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#show-scene-0 #scroll-section-0 .sticke-elem,
+#show-scene-1 #scroll-section-1 .sticke-elem,
+#show-scene-2 #scroll-section-2 .sticke-elem,
+#show-scene-3 #scroll-section-3 .sticke-elem {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    #scroll-section-0 h1 {
+        font-size: 9vw;
+    }
+
+    .main-message {
+        font-size: 4vw;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .description strong {
+        font-size: 6rem;
+    }
+
+    #scroll-section-2 .main-message {
+        font-size: 6vw;
+    }
+
+    .main-message small {
+        font-size: 1.5vw;
+    }
+
+    .desc-message {
+        width: 20%;
+    }
+
+    .mid-message {
+        font-size: 4vw;
+    }
+
+    .canvas-caption {
+        font-size: 2rem;
+    }
+}
+
+/*vw, vh는 창 크기에 따라 움직이는 크기
+em, rem은 폰트 사이즈에 따라 움직이는 크기*/

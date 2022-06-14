@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Green Foods</title>
+</head>
+
+<body>
+    <div class="container">
+        <header id="navbar">
+            <a href="#" class='logo'>Good<span>foods</span></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Coutact</a></li>
+            </ul>
+            <div class="menuIcon" onclick="menuToggle()"></div>
+        </header>
+        <div class="content">
+            <div class="bannerText" id="slideshowText">
+                <div class="active">
+                    <h2>EAT Healthy<br>
+                        Stay Healthy
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, debitis, quis in doloremque
+                        excepturi ad aspernatur nemo libero repellendus consectetur aliquid incidunt eligendi asperiores
+                        voluptatum? Error, repellat quas? Ea fugit sit earum commodi ratione, voluptates alias molestias
+                        facere porro dolorem labore! In vitae est ipsa placeat illo omnis nemo, aliquid cum quam animi
+                        itaque fugit similique.
+                    </p>
+                    <a href="#"> Read More </a>
+                </div>
+                <div>
+                    <h2>EAT Your<br>
+                        Veggies
+                    </h2>
+                    <p>
+                        Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <a href="#"> Read More </a>
+                </div>
+                <div>
+                    <h2>Good Food<br>
+                        Good Mood
+                    </h2>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                    <a href="#"> Read More </a>
+                </div>
+            </div>
+            <div class="bannerImg" id="slideshow">
+                <img src="img1.jpg" alt="" class="active">
+                <img src="img2.jpg" alt="">
+                <img src="img3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="icons">
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
+            <ul class="controls">
+                <li><a href="#"><img src="left.png" onclick="prevSlide(); prevSlideText()"></a></li>
+                <li><a href="#"><img src="right.png" onclick="nextSlide(); nextSlideText()"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        var slideshow = document.getElementById('slideshow');
+        var slides = slideshow.getElementsByTagName('img');
+        var index= 0;
+
+        function prevSlide(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+        function nextSlide(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+
+        var slideshowText = document.getElementById('slideshowText');
+        var slidesText = slideshowText.getElementsByTagName('div');
+        var i= 0;
+
+        function prevSlideText(){
+            slidesText[i].classList.remove('active');
+            i = (i - 1 + slidesText.length) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+        function nextSlideText(){
+            slidesText[i].classList.remove('active');
+            i = (i + 1) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+
+        function menuToggle(){
+            var nav = document.getElementById('navbar')
+            nav.classList.toggle('active')
+        }
+
+    </script>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

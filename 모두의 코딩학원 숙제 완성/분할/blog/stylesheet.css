@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+#blog_wrap {
+    width: 100%;
+}
+.blog_header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+.blog_header_left_box {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3%;
+    
+    background-color: rgba(0,0,0,0.8);
+}
+.blog_header_left_box p {
+    display: inline-block;
+    font-size: 90px;
+    font-family: 'Familiar Pro', 'sans-sarif';
+    color: rgba(255,255,255,0.8);
+}
+.blog_header_right_box {
+    width: 60%;
+    height: 100%;
+}
+.blog_header_right_text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog_header_right_text p {
+    width: 55%;
+    height: 23%;
+    
+    font-weight: 900;
+    font-size: 24px;
+    font-family: 'Source Serif Pro', 'sans-serif';
+    display: inline-block;
+    overflow: hidden;
+}
+
+.blog_section {
+    width: 100%;
+    height: 1200px;
+}
+.blog_section_box {
+    width: 100%;
+    height: 25%;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+.blog_section_inner_box {
+    width: 70%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.blog_section_text_1 {
+    width: 100%;
+}
+.blog_section_text_1 p {
+    width: 80%;
+    font-family: 'Familiar Pro', 'sans-serif';
+    font-size: 50px;
+}
+.blog_section_text_2 {
+    width: 100%;
+    
+    margin-top: 10px;
+    
+    font-family: 'Source Serif Pro', 'sans-serif';
+    font-size: 16px;
+}
+.blog_section_text_2 p{
+    
+    font-family: 'Source Serif Pro', 'sans-serif';
+    font-size: 16px;
+}
+.blog_section_box:last-child {
+    width: 100%;
+    height: 25%;
+    
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.blog_section_inner_box:last-child  {
+    width: 70%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+.blog_last_box button {
+    background-color: transparent;
+    cursor: pointer;
+}
+.blog_last_box p {
+    padding: 20px;
+    
+    font-family: 'Familiar Pro', 'sans-serif';
+    font-size: 16px;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scalie=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>FLAT DESIGN</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--여기서 type은 무엇을 의미하는 건가??? -->
+
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <!--이건 아이콘을 설정하는 링크입니다.-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/flat-design-touch.png">
+    <!--이것도 아이콘을 설정하는 링크인가???-->
+    <script src="js/jquery.min.js"></script>
+    <!--제이쿼리 파일인거 같다-->
+    <script src="js/flat.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!--infomation 부분-->
+        <section class="info_section">
+            <!--
+        wrap이라는 아이디를 가진 <div> 태그 사이에 영역을 구분하기 위한 <section> 태그를 작성하고, 클래스 명을 info_section이라고 입력합니다.
+        -->
+            <ul class="info_list">
+                <li><a href="index.html"><img src="images/s_images/info_icon_01.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/info_icon_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/info_icon_03.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/info_icon_04.png" alt=""></a></li>
+            </ul>
+        </section>
+
+        <!--header 영역-->
+        <header class="header">
+            <h1 class="logo">
+                <a href="index.html">flat<br>design</a>
+            </h1>
+
+            <!--header 메뉴 부분-->
+            <!--pc에서는 보이게 만들고, mobile, tablet 에서는 토글버튼에 숨기겠습니다.-->
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="index.html">홈</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+                    <li><a href="introduce.html">플랫 디자인이란?</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+                    <li><a href="gallery.html">갤러리</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+                    <li><a href="board.html">문의 사항</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+                </ul>
+                <!--
+                여기서 span 태그들은 토글 버튼으로, 켜짐/꺼짐처럼 두 상태 중 하나를 선택하는 데 사용합니다.
+                모바일환경이나 테블릿 환경에서는 화면의 크기가 작아 메뉴들을 펼쳐놓을수가 없습니다.
+                그래서 메뉴를 숨겨놓고 켜짐/꺼짐처럼 토글 버튼을 눌렀을 때만 메뉴 영역들을 보여주기 위해 사용합니다.
+                -->
+            </nav>
+            <!--모바일, 테블릿에서만 보이는 메뉴 버튼, 위 nav를 이 버튼에 숨기겠습니다-->
+            <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+
+        </header>
+
+
+        <!--slider 영역-->
+        <!--이미지를 효과적으로 보여주기 위한 공간입니다.-->
+        <section class="slider_section">
+            <span class="prev_btn">이전 버튼</span>
+            <span class="next_btn">다음 버튼</span>
+        </section>
+
+
+        <!--최신 글 영역, 인기 글 영역-->
+        <!--최근에 올라온 글들과 사람들이 많이 본 글들을 보여주는 공간입니다.-->
+        <section class="latest_post_section">
+            <h2 class="title">최신 글</h2>
+            <ul class="latest_post_list">
+                <li><a href="">안녕하세요. 홈페이지가 오픈했습니다.</a></li>
+                <li><a href="">홈페이지 리뉴얼 되었습니다.</a></li>
+                <li><a href="">flat design은 무엇일까요?</a></li>
+                <li><a href="">blog에서 다양한 정보를 둘러보세요.</a></li>
+                <li><a href="">저는 누굴까요?</a></li>
+            </ul>
+        </section>
+        <!--영역을 구분하기 위해 class 명을 달리합니다.-->
+        <section class="popular_post_section">
+            <h2 class="title">인기 글</h2>
+            <ul class="popular_post_list">
+                <li><a href="">안녕하세요. 홈페이지가 오픈했습니다.</a></li>
+                <li><a href="">홈페이지 리뉴얼 되었습니다.</a></li>
+                <li><a href="">flat design은 무엇일까요?</a></li>
+                <li><a href="">blog에서 다양한 정보를 둘러보세요.</a></li>
+                <li><a href="">저는 누굴까요?</a></li>
+            </ul>
+        </section>
+
+        <!--gallery 영역-->
+        <!--사진을 보여주는 공간-->
+        <section class="gallery_section">
+            <ul class="gallery_list">
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/p_images/gallery_01.jpg" alt="">
+                            <figcaption>디자인 트렌트 플랫</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/p_images/gallery_02.jpg" alt="">
+                            <figcaption>원색이 포인트 플랫</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!--인기 검색어 영역-->
+        <!--사람들이 많이 검색한 단어 순서대로 검색어를 보여주는 영역-->
+        <section class="rankup_section">
+            <h2 class="title">인기 검색어</h2>
+            <ul class="rankup_list">
+                <li><a href="">반응형 웹</a></li>
+                <li><a href="">미디어 쿼리</a></li>
+                <li><a href="">뷰포트</a></li>
+                <li><a href="">CSS 트릭스</a></li>
+                <li><a href="">W3C</a></li>
+                <li><a href="">루크 W</a></li>
+                <li><a href="">CSS 젠 가든</a></li>
+                <li><a href="">클리어 보스</a></li>
+                <li><a href="">XE</a></li>
+                <li><a href="">워드프레스</a></li>
+            </ul>
+        </section>
+
+
+        <!--banner 영역-->
+        <!--광고 또는 웹사이트에서 전달하고자 하는 내용을 담는 영역-->
+        <section class="banner_section">
+            <div class="banner_box_01">
+                <a href=""><img src="images/s_images/w3c_logo.png" alt=""></a>
+            </div>
+            <div class="banner_box_02">
+                <ul class="banner_list">
+                    <li><a href=""><img src="images/s_images/js_logo.png" alt=""></a></li>
+                    <li><a href=""><img src="images/s_images/html_logo.png" alt=""></a></li>
+                    <li><a href=""><img src="images/s_images/css_logo.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--social 영역-->
+        <!--소통을 위한 소셜 네트워크 링크 아이콘이 들어 있는 공간입니다.-->
+        <section class="social_section">
+            <ul class="social_list">
+                <li><a href=""><img src="images/s_images/social_icon_01.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/social_icon_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/social_icon_03.png" alt=""></a></li>
+            </ul>
+        </section>
+
+        <!--footer 영역-->
+        <!--웹사이트의 저작권 정보 등이 들어있는 영역-->
+        <footer class="footer">
+            <p>copyright&copy; 2021.flat design blog all rights reserved.</p>
+            <!--저작권 정보를 입력합니다.-->
+        </footer>
+    </div>
+    
+    <script src="js/test.js"></script>
+</body>
+
+</html>
